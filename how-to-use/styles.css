@@ -33,12 +33,12 @@ h1 {
 #app button {
   font-size: 14px;
   font-weight: 600;
-  width: 80px;
+  width: 6rem;
   margin: 0.3rem 0 1.0rem 1.5rem;
   border: none;
-  background-color: purple;
+  background-color: rgb(109, 0, 109);
   color: #fff;
-  padding: 0.5rem;
+  padding: 1rem;
   border-radius: 10px;
   cursor: pointer;
 }
