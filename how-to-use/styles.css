@@ -1,0 +1,44 @@
+h1 {
+    text-align: center;
+}
+
+#app {
+  align-items: center;
+}
+
+#app div {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  border: 1px solid black;
+  width: 60%;
+  border: none;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.19);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.19);
+}
+
+#app label {
+  font-weight: bold;
+  font-size: 24px;
+  margin: 1.0rem 0 0.3rem 1.5rem;
+}
+
+#app input {
+  width: 90%;
+  margin: 0.3rem 0 0.3rem 1.5rem;
+  padding: 0.5rem;
+  font-size: 24px;
+}
+
+#app button {
+  font-size: 14px;
+  font-weight: 600;
+  width: 80px;
+  margin: 0.3rem 0 1.0rem 1.5rem;
+  border: none;
+  background-color: purple;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
