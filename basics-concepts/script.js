@@ -27,7 +27,8 @@ app.mount("#user-goal");
 const app = Vue.createApp({
   data() {
     return {
-      message: "Some Text",
+      coruseGoalA: "Goal A",
+      coruseGoalB: "Goal B",
       vueLink: "https://v3.vuejs.org",
     };
   },
