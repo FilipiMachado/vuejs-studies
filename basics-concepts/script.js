@@ -24,11 +24,23 @@ Vue.createApp(ListRendering).mount("#list-rendering");
 app.mount("#user-goal");
  */
 
-const app = Vue.createApp({
+/* const app = Vue.createApp({
   data() {
     return {
       text: "Some Text",
       vueLink: "https://v3.vuejs.org/"
+    };
+  },
+});
+
+app.mount("#user-goal");
+ */
+
+const app = Vue.createApp({
+  data() {
+    return {
+      text: "Some Text",
+      vueLink: "https://v3.vuejs.org",
     };
   },
 });
