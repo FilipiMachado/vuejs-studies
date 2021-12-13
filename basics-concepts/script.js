@@ -27,8 +27,8 @@ app.mount("#user-goal");
 const app = Vue.createApp({
   data() {
     return {
-      coruseGoalA: "Goal A",
-      coruseGoalB: "Goal B",
+      courseGoalA: "Goal A",
+      courseGoalB: "Goal B",
       vueLink: "https://v3.vuejs.org",
     };
   },
@@ -36,9 +36,9 @@ const app = Vue.createApp({
     outputGoal() {
       const randNumber = Math.random();
       if (randNumber < 0.5) {
-        return "Learn Vue!";
+        return this.courseGoalA;
       } else {
-        return "Master Vue!";
+        return this.courseGoalB;
       }
     },
   },
