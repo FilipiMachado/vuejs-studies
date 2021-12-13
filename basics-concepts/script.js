@@ -29,11 +29,18 @@ const app = Vue.createApp({
     return {
       message: "Some Text",
       vueLink: "https://v3.vuejs.org",
-      helloWorld() {
-        console.log("Hello World")
-      }
     };
+  },
+  methods: {
+    outputGoal() {
+      const randNumber = Math.random();
+      if (randNumber < 0.5) {
+        return "Learn Vue!";
+      } else {
+        return "Master Vue!";
+      }
+    },
   },
 });
 
-app.mount("#user-goal")
+app.mount("#user-goal");
