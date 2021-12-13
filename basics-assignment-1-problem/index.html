@@ -21,13 +21,13 @@
       <!-- 3) Output your age + 5 -->
       <p>{{age+5}}</p>
       <!-- 4) Output a random number (0 to 1) -->
-      <p>Favorite Number: RANDOM NUMBER BETWEEN 0 AND 1</p>
+      <p>{{genNumber()}}</p>
       <div>
         <!-- 5) Display some image you found via Google -->
-        <img src="SOME IMAGE URL" />
+        <img v-bind:src="animalImg" />
       </div>
       <!-- 6) Prepopulate the input field with your name via the "value" attribute -->
-      <input type="text" />
+      <input type="text" v-bind:value="name" />
     </section>
   </body>
 </html>
