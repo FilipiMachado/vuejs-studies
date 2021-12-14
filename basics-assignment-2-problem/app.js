@@ -7,8 +7,8 @@ const app = Vue.createApp({
     };
   },
   methods: {
-    nameInput() {
-        
+    nameInput(e) {
+      this.name = e.target.value;
     },
     ageInput(e) {
       this.number = e.target.value;
