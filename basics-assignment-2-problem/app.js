@@ -1,8 +1,14 @@
 const app = Vue.createApp({
   data() {
-    return {};
+    return {
+        message: 'Hello My Friend!'
+    };
   },
-  methods: {},
+  methods: {
+    alertMessage() {
+        alert(this.message);
+    }
+  },
 });
 
 app.mount("#assignment");
