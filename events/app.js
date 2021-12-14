@@ -3,12 +3,11 @@ const app = Vue.createApp({
     return {
       counter: 0,
       name: "",
-      number: "",
     };
   },
   methods: {
     setName(event) {
-      this.number = event.target.value;
+      this.name = event.target.value;
     },
     add(num) {
       this.counter = this.counter + num;
