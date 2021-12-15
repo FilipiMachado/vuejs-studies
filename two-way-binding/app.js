@@ -13,10 +13,6 @@ const app = Vue.createApp({
       }
       return `${this.age} years old.`;
     },
-    clearInput() {
-      this.age = "";
-      console.log("running again")
-    },
   },
   methods: {
     setName(event) {
@@ -33,6 +29,10 @@ const app = Vue.createApp({
       this.age = event.target.value;
     },
     /* outputAge() {}, */
+    clearInput() {
+      this.age = "";
+      console.log("running again")
+    },
   },
 });
 
