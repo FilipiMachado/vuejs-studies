@@ -18,7 +18,7 @@ const app = Vue.createApp({
       // this.counter--;
     },
     outputAge() {
-      if (this.age === 0) {
+      if (this.age == "") {
         return "";
       }
       return `${this.age} years old.`;
