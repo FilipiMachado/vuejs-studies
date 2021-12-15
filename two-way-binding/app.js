@@ -6,6 +6,18 @@ const app = Vue.createApp({
       age: "",
     };
   },
+  computed: {
+    myAge() {
+      if (this.age == "") {
+        return "";
+      }
+      return `${this.age} years old.`;
+    },
+    clearInput() {
+      this.age = "";
+      console.log("running again")
+    },
+  },
   methods: {
     setName(event) {
       this.name = event.target.value;
@@ -20,15 +32,7 @@ const app = Vue.createApp({
     setAge(event) {
       this.age = event.target.value;
     },
-    outputAge() {
-      if (this.age == "") {
-        return "";
-      }
-      return `${this.age} years old.`;
-    },
-    clearInput() {
-      this.age = "";
-    },
+    /* outputAge() {}, */
   },
 });
 
