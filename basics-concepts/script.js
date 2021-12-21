@@ -24,7 +24,7 @@ Vue.createApp(ListRendering).mount("#list-rendering");
 app.mount("#user-goal");
  */
 
-const app = Vue.createApp({
+/* const app = Vue.createApp({
   data() {
     return {
       courseGoalA: "Goal A",
@@ -45,3 +45,14 @@ const app = Vue.createApp({
 });
 
 app.mount("#user-goal");
+ */
+
+const app = Vue.createApp({
+  data(){
+    return {
+      courseGoal: [1,2,3],
+    }
+  }
+});
+
+app.mount("#user-goal") 
