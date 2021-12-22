@@ -50,7 +50,7 @@ app.mount("#user-goal");
 const app = Vue.createApp({
   data() {
     return {
-      courseGoal: "<h3>Master Vue.js!</h3>",
+      courseGoal: "Master Vue.js!",
       simpleLink: "https://www.google.com.br/",
     };
   },
