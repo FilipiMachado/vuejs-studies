@@ -1,4 +1,4 @@
-const app = Vue.createApp({
+/* const app = Vue.createApp({
   data() {
     return {
       counter: 0,
@@ -29,9 +29,28 @@ const app = Vue.createApp({
       this.age = event.target.value;
     },
     /* outputAge() {}, */
-    clearInput() {
+/*  clearInput() {
       this.age = "";
       console.log("running again")
+    },
+  },
+});
+
+app.mount("#events"); */
+
+const app = Vue.createApp({
+  data() {
+    return {
+      counter: 0,
+    };
+  },
+  computed: {},
+  methods: {
+    add(num) {
+      this.counter += num;
+    },
+    reduce(num) {
+      this.counter -= num;
     },
   },
 });
