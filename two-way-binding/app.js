@@ -42,6 +42,8 @@ const app = Vue.createApp({
   data() {
     return {
       counter: 0,
+      name: "",
+      confirmedName: "",
     };
   },
   computed: {},
@@ -52,6 +54,12 @@ const app = Vue.createApp({
     reduce(num) {
       this.counter -= num;
     },
+    setName(e) {
+      this.name = e.target.value;
+    },
+    confirmInput() {
+      this.confirmedName = this.name
+    }
   },
 });
 
