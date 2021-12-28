@@ -38,7 +38,7 @@
 
 app.mount("#events"); */
 
-const app = Vue.createApp({
+/* const app = Vue.createApp({
   data() {
     return {
       counter: 0,
@@ -73,10 +73,12 @@ const app = Vue.createApp({
     outputName() {
 
     },
-    /* confirmInput() {
+     confirmInput() {
       this.confirmedName = this.name;
-    }, */
+    }, 
   },
 });
 
 app.mount("#events");
+ */
+
