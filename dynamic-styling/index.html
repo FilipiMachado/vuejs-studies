@@ -17,9 +17,21 @@
       <h1>Vue Dynamic Styling</h1>
     </header>
     <section id="styling">
-      <div class="demo" v-bind:style="{borderColor: boxASelected ? 'red' : 'green'}" v-on:click="boxSelected('A')"></div>
-      <div class="demo" v-bind:style="{borderColor: boxBSelected ? 'red' : 'green'}" v-on:click="boxSelected('B')"></div>
-      <div class="demo"v-bind:style="{borderColor: boxCSelected ? 'red' : 'green'}" v-on:click="boxSelected('C')"></div>
+      <div
+        class="demo"
+        v-bind:style="{borderColor: boxASelected ? 'red' : 'green'}"
+        v-on:click="boxSelected('A')"
+      ></div>
+      <div
+        class="demo"
+        v-bind:style="{borderColor: boxBSelected ? 'red' : 'green'}"
+        v-on:click="boxSelected('B')"
+      ></div>
+      <div
+        class="demo"
+        v-bind:style="{borderColor: boxCSelected ? 'red' : 'green'}"
+        v-on:click="boxSelected('C')"
+      ></div>
     </section>
   </body>
 </html>
