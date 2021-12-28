@@ -7,9 +7,15 @@ const app = Vue.createApp({
     };
   },
   methods: {
-      boxSelected(box) {
-          
+    boxSelected(box) {
+      if (box === "A") {
+        this.boxASelected = true;
+      } else if (box === "B") {
+        this.boxBSelected = true;
+      } else if (box === "C") {
+        this.boxCSelected = true;
       }
+    },
   },
   computed: {},
 });
