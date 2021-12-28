@@ -9,7 +9,7 @@ const app = Vue.createApp({
         if(this.counter < 37) {
             return "Not there yet..."
         } else if (this.counter === 37) {
-            return this.counter
+            return "Correct!"
         } else {
             return "Too much!"
         }
