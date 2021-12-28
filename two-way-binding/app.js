@@ -44,9 +44,19 @@ const app = Vue.createApp({
       counter: 0,
       name: "",
       confirmedName: "",
+      lastName: "Machado"
     };
   },
-  computed: {},
+  computed: {
+    fullName() {
+      console.log("Running again!")
+      if (this.name === "") {
+        return "";
+      } else {
+        return `${this.name} ${this.lastName}`;
+      }
+    },
+  },
   methods: {
     add(num) {
       this.counter += num;
@@ -57,9 +67,15 @@ const app = Vue.createApp({
     setName(e) {
       this.name = e.target.value;
     },
-    confirmInput() {
-      this.confirmedName = this.name
-    }
+    resetInput() {
+      this.name = "";
+    },
+    outputName() {
+
+    },
+    /* confirmInput() {
+      this.confirmedName = this.name;
+    }, */
   },
 });
 
