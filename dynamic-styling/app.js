@@ -1,13 +1,17 @@
-const app = vue.CreateApp({
-    data(){
+const app = Vue.createApp({
+  data() {
+    return {
+      boxASelected: false,
+      boxBSelected: false,
+      boxCSelected: false,
+    };
+  },
+  methods: {
+      boxSelected(box) {
+          
+      }
+  },
+  computed: {},
+});
 
-    },
-    computed: {
-
-    },
-    methods: {
-
-    },
-})
-
-app.mount("#styling")
+app.mount("#styling");
