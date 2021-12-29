@@ -21,10 +21,10 @@
       <!-- The entered class should be added to the below paragraph -->
       <input type="text" v-on:keyup.enter="getUserInput"/>
       <!-- (available classes: "user1", "user2") -->
-      <p class="user1">
+      <p class="user1" v-bind:class="{hidden: isActive}">
         {{userInput}}
       </p>
-      <button>Toggle Paragraph</button>
+      <button v-on:click="toggleDisplay('active')">Toggle Paragraph</button>
       <!-- 2) Use the "visible" and "hidden" classes to show/ hide the above paragraph -->
       <!-- Clicking the button should toggle between the two options -->
 
