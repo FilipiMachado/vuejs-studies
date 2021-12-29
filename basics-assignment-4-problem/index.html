@@ -19,10 +19,10 @@
     <section id="assignment">
       <!-- 1) Fetch the user input and use it as a CSS class -->
       <!-- The entered class should be added to the below paragraph -->
-      <input type="text" />
+      <input type="text" v-on:keyup.enter="getUserInput"/>
       <!-- (available classes: "user1", "user2") -->
-      <p>
-        Style me!
+      <p class="user1">
+        {{userInput}}
       </p>
       <button>Toggle Paragraph</button>
       <!-- 2) Use the "visible" and "hidden" classes to show/ hide the above paragraph -->
