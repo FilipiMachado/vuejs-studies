@@ -34,3 +34,9 @@ header {
   margin: 16px;
   border: 2px dashed #ccc;
 }
+
+.active {
+  border-color: crimson;
+}
+
+/* border-color: #4fc08d; */
