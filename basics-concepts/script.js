@@ -56,7 +56,12 @@ const app = Vue.createApp({
   },
   methods: {
     outputGoal() {
-      this.courseGoal = "Master Vue.js!"
+      const randNumber = Math.random();
+      if (randNumber < 0.5) {
+        this.courseGoal = "Learn Vue!"
+      } else {
+        this.courseGoal = "Master Vue!"
+      }
     }
   }
 });
