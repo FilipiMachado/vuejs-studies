@@ -14,24 +14,16 @@
   </head>
   <body>
     <header>
-      <h1>Vue Dynamic Styling</h1>
+      <h1>Vue Course Goals</h1>
     </header>
-    <section id="styling">
-      <div
-        class="demo"
-        v-bind:class="boxAClasses"
-        v-on:click="boxSelected('A')"
-      ></div>
-      <div
-        class="demo"
-        v-bind:class="boxBClasses"
-        v-on:click="boxSelected('B')"
-      ></div>
-      <div
-        class="demo"
-        v-bind:class="boxCClasses"
-        v-on:click="boxSelected('C')"
-      ></div>
+    <section id="user-goals">
+      <h2>My course goals</h2>
+      <input type="text" />
+      <button>Add Goal</button>
+      <p>No goals have been added yet - please start adding some!</p>
+      <ul>
+        <li>Goal</li>
+      </ul>
     </section>
   </body>
 </html>
