@@ -26,8 +26,10 @@
         <input type="text">
         <button>Sign Up</button>
       </form> -->
-    <input type="text" v-on:input="addName" v-on:keyup.enter="confirmName">
-    <p>Your Name: {{ confirmedName }}</p>
+    <!-- <input type="text" v-bind:value="name" v-on:input="addName" v-on:keyup.enter="confirmName"> -->
+    <input type="text" v-model="name">
+    <button v-on:click="resetInput">Reset Input</button>
+    <p>Your Name: {{ name }}</p>
   </section>
 </body>
 

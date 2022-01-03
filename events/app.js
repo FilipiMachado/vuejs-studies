@@ -67,6 +67,9 @@ const app = Vue.createApp({
     },
     confirmName() {
       this.confirmedName = this.name;
+    },
+    resetInput() {
+      this.name = ""
     }
   },
 });
