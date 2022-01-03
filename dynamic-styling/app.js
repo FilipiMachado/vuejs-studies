@@ -7,15 +7,13 @@ const app = Vue.createApp({
     };
   },
   methods: {
-    boxSelected(box){
+    boxSelected(box) {
       if (box === "A") {
         this.boxASelected = true;
       }
-    }
+    },
   },
-  computed: {
-
-  },
+  computed: {},
 });
 
 app.mount("#styling");
