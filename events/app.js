@@ -50,7 +50,7 @@ confirmedName: "", */
 const app = Vue.createApp({
   data() {
     return {
-      counter: "",
+      counter: 0,
       name: "",
       confirmedName: "",
     };
