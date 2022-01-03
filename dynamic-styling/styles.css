@@ -37,6 +37,7 @@ header {
 
 .active {
   background-color: #4fc08d;
+  border-color: crimson;
 }
 
 /* border-color: #4fc08d; */
