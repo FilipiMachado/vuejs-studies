@@ -54,6 +54,12 @@ const app = Vue.createApp({
     };
   },
   methods: {
+    addCounter() {
+      this.counter += 10
+    },
+    decreaseCounter() {
+      this.counter -= 5
+    }
   },
 });
 
