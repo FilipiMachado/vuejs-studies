@@ -4,6 +4,7 @@ const app = Vue.createApp({
       userInput: "",
       isActive: false,
       isHidden: false,
+      inputBackgroundColor: "",
     };
   },
   methods: {
