@@ -55,6 +55,15 @@ const app = Vue.createApp({
       confirmedName: "",
     };
   },
+  computed: {
+    fullName() {
+      if (this.name === "") {
+        return ""
+      } else {
+        return this.name + " Machado"
+      }
+    }
+  },
   methods: {
     addCounter(num) {
       this.counter += num;
