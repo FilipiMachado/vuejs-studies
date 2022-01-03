@@ -17,8 +17,8 @@
   </header>
   <section id="events">
     <h2>Events in Action</h2>
-    <button v-on:click="addCounter(10)">Add</button>
-    <button v-on:click="decreaseCounter(5)">Subtract</button>
+    <button v-on:click="addCounter(10)">Add 10</button>
+    <button v-on:click="decreaseCounter(5)">Subtract 5</button>
     <p>Result: {{ counter }}</p>
     <!-- <input type="text" v-on:input="addName" v-on:keyup.enter="setName">
       <p>Your Name: {{ confirmedName }}</p>
@@ -26,6 +26,8 @@
         <input type="text">
         <button>Sign Up</button>
       </form> -->
+    <input type="text" v-on:input="addName" v-on:keyup.enter="confirmName">
+    <p>Your Name: {{ confirmedName }}</p>
   </section>
 </body>
 

@@ -51,14 +51,22 @@ const app = Vue.createApp({
   data() {
     return {
       counter: "",
+      name: "",
+      confirmedName: "",
     };
   },
   methods: {
     addCounter(num) {
-      this.counter += num
+      this.counter += num;
     },
     decreaseCounter(num) {
-      this.counter -= num
+      this.counter -= num;
+    },
+    addName(e) {
+      this.name = e.target.value;
+    },
+    confirmName() {
+      this.confirmedName = this.name;
     }
   },
 });
