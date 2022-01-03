@@ -19,17 +19,17 @@
     <section id="styling">
       <div
         class="demo"
-        v-bind:class="{active: boxASelected}"
+        v-bind:class="boxAClasses"
         v-on:click="boxSelected('A')"
       ></div>
       <div
         class="demo"
-        v-bind:class="{active: boxBSelected}"
+        v-bind:class="boxAClasses"
         v-on:click="boxSelected('B')"
       ></div>
       <div
         class="demo"
-        v-bind:class="{active: boxCSelected}"
+        v-bind:class="boxAClasses"
         v-on:click="boxSelected('C')"
       ></div>
     </section>
