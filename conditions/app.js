@@ -2,7 +2,7 @@ const app = Vue.createApp({
   data() {
     return {
       enteredGoalValue: "",
-      goals: ["Finish the course!"],
+      goals: [],
     };
   },
   computed: {},
