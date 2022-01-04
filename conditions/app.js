@@ -10,6 +10,7 @@ const app = Vue.createApp({
     addGoal() {
       this.goals.push(this.enteredGoalValue);
       console.log(this.goals)
+      console.log(this.goals.length)
     },
   },
 });
