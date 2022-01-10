@@ -11,6 +11,8 @@ const app = Vue.createApp({
       playerHealth: 100,
       monsterHealth: 100,
       currentRound: 0,
+      gameOverMessage: "Game Over!",
+      gameIsOver: true,
     };
   },
   computed: {
@@ -22,6 +24,27 @@ const app = Vue.createApp({
     },
     mayUseSpecialAttack() {
       return this.currentRound % 3 !== 0;
+    },
+    gameOver() {
+      if (this.playerHealth === 0) {
+        return this.gameOverMessage;
+      }
+    },
+  },
+  watch: {
+    playerHealth(value) {
+      if (value <= 0 && this.monsterHealth <= 0) {
+        // Draw
+      } else if (value <= 0) {
+        // Player lost
+      }
+    },
+    monsterHealth(value) {
+      if (value <= 0 && this.playerHealth <= 0) {
+        // draw
+      } else if (value <= 0) {
+        // Monster lost
+      }
     },
   },
   methods: {
@@ -43,6 +66,7 @@ const app = Vue.createApp({
       this.attackPlayer();
     },
     healPlayer() {
+      this.currentRound++;
       const healValue = getRandomHealValue(10, 5);
       if (this.playerHealth + healValue > 100) {
         this.playerHealth = 100;
