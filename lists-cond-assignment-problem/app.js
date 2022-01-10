@@ -1,3 +1,15 @@
 const app = Vue.createApp({
-    return {}
-})
+  data() {
+    return {
+        goal: [],
+    };
+  },
+  computed: {},
+  methods: {
+      addTasks() {
+
+      }
+  },
+});
+
+app.mount("#assignment");
