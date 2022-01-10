@@ -31,8 +31,8 @@
       </section>
       <section id="controls">
         <button v-on:click="attackMonster">ATTACK</button>
-        <button>SPECIAL ATTACK</button>
-        <button>HEAL</button>
+        <button v-on:click="specialAttackPlayer">SPECIAL ATTACK</button>
+        <button v-on:click="healPlayer">HEAL</button>
         <button>SURRENDER</button>
       </section>
       <section id="log" class="container">

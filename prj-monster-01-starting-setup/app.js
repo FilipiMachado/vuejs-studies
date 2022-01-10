@@ -1,6 +1,9 @@
 function getRandomAttackValue(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
+function getRandomHealValue(min, max) {
+    return Math.floor(Math.random() * (max + min) + min);
+}
 
 const app = Vue.createApp({
   data() {
@@ -10,12 +13,12 @@ const app = Vue.createApp({
     };
   },
   computed: {
-      monsterBarStyles() {
-        return {width: this.monsterHealth + '%'}
-      },
-      playerBarStyles() {
-        return {width: this.playerHealth + '%'}
-      }
+    monsterBarStyles() {
+      return { width: this.monsterHealth + "%" };
+    },
+    playerBarStyles() {
+      return { width: this.playerHealth + "%" };
+    },
   },
   methods: {
     attackMonster() {
@@ -26,6 +29,16 @@ const app = Vue.createApp({
     attackPlayer() {
       const attackValue = getRandomAttackValue(18, 8);
       this.playerHealth -= attackValue;
+    },
+    specialAttackPlayer() {
+      const attackValue = getRandomAttackValue(25, 10);
+      this.monsterHealth -= attackValue;
+      this.attackPlayer();
+    },
+    healPlayer() {
+      const healValue = getRandomHealValue(10, 5);
+      this.playerHealth += healValue;
+      this.attackPlayer();
     },
   },
 });
