@@ -1,14 +1,18 @@
 const app = Vue.createApp({
   data() {
     return {
-        goal: [],
+      userInput: "",
+      tasks: [],
     };
   },
   computed: {},
   methods: {
-      addTasks() {
-
-      }
+    addTask() {
+      this.tasks.push(this.userInput);
+    },
+    showTasks() {
+      
+    }
   },
 });
 
