@@ -22,8 +22,8 @@
       <button v-on:click="addGoal">Add Goal</button>
       <p v-if="goals.length === 0">No goals have been added yet - please start adding some!</p>
       <ul v-else>
-        <li v-for="goal in goals">
-          {{ goal }}
+        <li v-for="(goal, index) in goals">
+          {{ goal }} - {{ index }}
           <span v-on:click="removeGoal(index)" style="cursor: pointer; color: #d80731">X</span>
           <!-- <input type="text" /> -->
         </li>
