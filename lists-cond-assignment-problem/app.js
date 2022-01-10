@@ -3,6 +3,7 @@ const app = Vue.createApp({
     return {
       userInput: "",
       tasks: [],
+      taskIsVisible: true,
     };
   },
   computed: {},
@@ -11,8 +12,8 @@ const app = Vue.createApp({
       this.tasks.push(this.userInput);
     },
     showTasks() {
-      
-    }
+      this.taskIsVisible = !this.taskIsVisible;
+    },
   },
 });
 
