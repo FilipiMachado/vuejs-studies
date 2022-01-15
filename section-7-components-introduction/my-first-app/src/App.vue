@@ -1,19 +1,17 @@
 <template>
   <div id="app">
-    <h2>My Friends</h2>
-    <ul>
-      <li>{{  }}</li>
-      <li>{{  }}</li>
-    </ul>
+    <FriendContact />
   </div>
 </template>
 
 <script>
 //import HelloWorld from './components/HelloWorld.vue'
+import FriendContact from "./components/FriendContact.vue"
 
 export default {
   name: 'App',
   components: {
+    FriendContact,
   },
   data(){
     return {
