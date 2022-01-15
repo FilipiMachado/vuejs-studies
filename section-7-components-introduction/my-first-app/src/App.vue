@@ -1,25 +1,42 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h2>My Friends</h2>
+    <ul>
+      <li>{{  }}</li>
+      <li>{{  }}</li>
+    </ul>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+  },
+  data(){
+    return {
+      friends: [
+        {
+          id: "filipi",
+          name: "Filipi",
+          phone: "184151854",
+          email: "filipi@gmail.com"
+        },
+        {
+          id: "zueiro",
+          name: "Zueiro",
+          phone: "841554184",
+          email: "zueiro@gmail.com"
+        }
+      ]
+    }
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
