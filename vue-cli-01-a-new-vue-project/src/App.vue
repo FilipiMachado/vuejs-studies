@@ -1,7 +1,7 @@
 <template>
     <section>
         <h2>My Friends</h2>
-        <ul>
+        <ul> 
             <li>{{ friends[0] }}</li>
             <li>{{ friends[1] }}</li>
         </ul>
