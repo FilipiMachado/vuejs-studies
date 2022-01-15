@@ -17,20 +17,7 @@ export default {
   },
   data(){
     return {
-      friends: [
-        {
-          id: "filipi",
-          name: "Filipi",
-          phone: "184151854",
-          email: "filipi@gmail.com"
-        },
-        {
-          id: "zueiro",
-          name: "Zueiro",
-          phone: "841554184",
-          email: "zueiro@gmail.com"
-        }
-      ]
+      
     }
   }
 }
