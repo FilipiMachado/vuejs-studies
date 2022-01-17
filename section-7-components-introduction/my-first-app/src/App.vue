@@ -2,14 +2,13 @@
   <div id="app">
     <header><h1>My Friends</h1></header>
     <ul>
-      <FriendContact />
-      <FriendContact />
+      <FriendContact name="Zuero" phone-number="123456789" email-address="zuiei@gmail.com"/>
+      <FriendContact name="Peregrino" phone-number="987654321" email-address="peregrino@gmail.com"/>
     </ul>
   </div>
 </template>
 
 <script>
-//import HelloWorld from './components/HelloWorld.vue'
 import FriendContact from "./components/FriendContact.vue";
 
 export default {
