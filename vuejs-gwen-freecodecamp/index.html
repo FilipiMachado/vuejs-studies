@@ -11,8 +11,14 @@
 </head>
 <body>
     <div id="first-app">
-        <h2>{{ title }}</h2>
-        <input/>
+        <h2>{{ greeting }}</h2>
+        <input v-model="greeting"/>
+
+        <hr/>
+
+        <div v-if="isVisible" class="box"></div>
+        <div v-else-if="isVisible2" class="box2"></div>
+        <div v-else class="box3"></div>
     </div>
 </body>
 </html>

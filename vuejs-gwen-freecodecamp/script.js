@@ -1,7 +1,9 @@
 const app = Vue.createApp({
     data() {
         return {
-            title: "Welcome to Vue!"
+            greeting: "Welcome to Vue!",
+            isVisible: false,
+            isVisible2: false,
         }
     }
 })
