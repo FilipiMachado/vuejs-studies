@@ -4,14 +4,21 @@
       <h1>My Friends</h1>
     </header>
     <ul>
-      <friend-contact></friend-contact>
-      <friend-contact></friend-contact>
+      <FriendContact></FriendContact>
+      <FriendContact></FriendContact>
     </ul>
   </section>
 </template>
 
 <script>
+import FriendContact from "@/components/FriendContact"
 export default {
+  props: [
+    'title'
+  ],
+  components: {
+    FriendContact
+  },
   data() {
     return {
       friends: [
