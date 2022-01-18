@@ -1,6 +1,6 @@
 <template>
   <li>
-    <h2>{{ name }} {{ isFavorite === '1' ? '(Favorite)' : ''}}</h2>
+    <h2>{{ name }} {{ favoriteAreVisible === true ? '(Favorite)' : ''}}</h2>
     <button @click="toggleDetails">{{ detailsAreVisible ? 'Hide' : 'Show' }} Details</button>
     <button @click="toggleFavorite">{{ favoriteAreVisible ? 'Hide' : 'Show' }} Favorite</button>
 
@@ -19,12 +19,13 @@
 
 <script>
 export default {
-  props: [
-    "name",
-    "phoneNumber",
-    "emailAddress",
-    "isFavorite"
-  ],
+  props: {
+    "name": String,
+    "phoneNumber": Number,
+    "emailAddress": String,
+    "isFavorite": Boolean
+  }
+  ,
   data() {
     return {
       detailsAreVisible: false,
@@ -34,7 +35,7 @@ export default {
         phone: "0123 45678 90",
         email: "manuel@localhost.com",
       },
-      favoriteAreVisible: false,
+      favoriteAreVisible: this.isFavorite,
     };
   },
   methods: {
@@ -42,12 +43,7 @@ export default {
       this.detailsAreVisible = !this.detailsAreVisible;
     },
     toggleFavorite(){
-      //this.favoriteAreVisible = !this.favoriteAreVisible
-      if(this.isFavorite === "1") {
-        this.isFavorite = "0"
-      } else {
-        this.isFavorite = "1"
-      }
+      this.favoriteAreVisible = !this.favoriteAreVisible
     }
   }
 };
