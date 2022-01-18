@@ -4,8 +4,18 @@
       <h1>My Friends</h1>
     </header>
     <ul>
-      <FriendContact></FriendContact>
-      <FriendContact></FriendContact>
+      <FriendContact
+        name="Zueiro Lorenz"
+        phone-number="128184844"
+        email-address="zueiro@gmail.com"
+        is-favorite="1"
+      ></FriendContact>
+      <FriendContact
+        name="Peregrino Rules"
+        phone-number="748825844"
+        email-address="peregrino@gmail.com"
+        is-favorite="0"
+      ></FriendContact>
     </ul>
   </section>
 </template>
