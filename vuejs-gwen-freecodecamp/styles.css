@@ -14,3 +14,13 @@
     height: 150px;
     background-color: #d3c6f7;
 }
+#submit-button {
+    display: block;
+    margin-top: 20px;
+    border: none;
+    padding: 15px;
+    background-color: rgb(128, 30, 128);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
