@@ -19,6 +19,7 @@ app.component("login-form", {
     template: `
         <form v-on:submit.prevent="handleSubmit">
             <h1>{{ title }}</h1>
+            <p v-for="input in inputs"></p>
             <custom-input v-model="email" v-bind:modelValue="email" v-bind:label="emailLabel"/>
             <custom-input  v-model="password" v-bind:modelValue="password" v-bind:label="passwordLabel"/>
             <button id="submit-button">Submit</button>
@@ -30,6 +31,11 @@ app.component("login-form", {
     data() {
         return {
             title: "Login Form",
+            inputs: [
+                'email',
+                'password',
+                'name'
+            ],
             email: "",
             password: "",
             emailLabel: "Email",
