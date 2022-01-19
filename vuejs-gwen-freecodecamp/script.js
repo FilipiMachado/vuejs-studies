@@ -62,6 +62,7 @@ app.component("custom-input", {
             },
             set(value){
                 console.log(value)
+                this.$emit()
             }
         }
     },
