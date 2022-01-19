@@ -19,18 +19,21 @@ app.component("login-form", {
     template: `
         <form v-on:submit.prevent="handleSubmit">
             <h1>{{ title }}</h1>
-            <h3>Email: </h3>
-            <input type="email" v-model="email"/>
-            <h3>Password: </h3>
-            <input type="password" v-model="password"/>
+            <custom-input type="email" v-bind:label="emailLabel"/>
+            <custom-input type="password" v-bind:label="passwordLabel"/>
             <button id="submit-button">Submit</button>
         </form>
     `,
-    data(){
+    components: [
+        'custom-input'
+    ],
+    data() {
         return {
             title: "Login Form",
             email: "",
             password: "",
+            emailLabel: "Email",
+            passwordLabel: "Password",
         }
     },
     methods: {
@@ -40,6 +43,21 @@ app.component("login-form", {
             this.password = ""
         }
     },
+})
+app.component("custom-input", {
+    template: `
+        <label>
+            {{ label }}
+            <input type="text" />
+        </label>
+    `,
+    props: [
+        'label'
+    ],
+    data() {
+        return {}
+    },
+    methods: {},
 })
 
 app.mount("#first-app")
