@@ -18,10 +18,14 @@ const app = Vue.createApp({
 app.component("login-form", {
     template: `
         <form v-on:submit.prevent="handleSubmit">
-            <h1>{{ title }}</h1>
-            <p v-for="input in inputs"></p>
-            <custom-input v-model="email" v-bind:modelValue="email" v-bind:label="emailLabel"/>
-            <custom-input  v-model="password" v-bind:modelValue="password" v-bind:label="passwordLabel"/>
+            <h1>{{ title }}</h1> 
+            <custom-input 
+                v-for="(input, i) in inputs"
+                v-bind:key="i"
+                v-model="input.value" 
+                v-bind:label="input.label"
+                v-bind:type="input.type"
+                />
             <button id="submit-button">Submit</button>
         </form>
     `,
@@ -32,19 +36,22 @@ app.component("login-form", {
         return {
             title: "Login Form",
             inputs: [
-                'email',
-                'password',
-                'name'
+                {
+                    label: 'Email',
+                    value: '',
+                    type: 'email'
+                },
+                {
+                    label: 'Password',
+                    value: '',
+                    type: 'password'
+                }
             ],
-            email: "",
-            password: "",
-            emailLabel: "Email",
-            passwordLabel: "Password",
         }
     },
     methods: {
         handleSubmit(){
-            console.log(this.email, this.password);
+            console.log(this.inputs[0].value, this.inputs[1].value);
             this.email = ""
             this.password = ""
         }
@@ -54,11 +61,12 @@ app.component("custom-input", {
     template: `
         <label>
             {{ label }}
-            <input type="text" v-model="inputValue"/>
+            <input v-bind:type="type" v-model="inputValue"/>
         </label>
     `,
     props: [
         'label',
+        'type',
         'modelValue'
     ],
     computed: {
@@ -71,12 +79,12 @@ app.component("custom-input", {
                 this.$emit('update:modelValue', value)
             }
         }
+        /* data() {
+            return {
+                inputValue: "",
+            }
+        }, */
     },
-    /* data() {
-        return {
-            inputValue: "",
-        }
-    }, */
 })
 
 app.mount("#first-app")
