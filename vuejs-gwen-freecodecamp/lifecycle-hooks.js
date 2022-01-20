@@ -1,5 +1,14 @@
 const app = Vue.createApp({
-    data(){}
+    data(){
+        return {
+            isVisible: false,
+        }
+    },
+    methods: {
+        showBox(){
+            this.isVisible = !this.isVisible
+        }
+    }
 })
 
 app.mount('#first-app')
