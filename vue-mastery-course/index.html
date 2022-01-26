@@ -19,7 +19,9 @@
       <div class="product-display">
         <div class="product-container">
           <div class="product-image">
-              <img :src="image"/>
+              <img :src="image"
+                   :class="{'out-of-stock-img': !inStock}"
+              />
           </div>
           <div class="product-info">
             <h1>{{ product }}</h1>
@@ -37,10 +39,14 @@
                   class="color-circle"
                   :style="{ backgroundColor: variant.color }"
                   >
-                    
               </li>
             </ul>
-            <button class="button" v-on:click="addToCart">Adicionar ao Carrinho</button>
+            <button class="button" 
+                    :class="{ disabledButton: !inStock }"
+                    v-on:click="addToCart"
+                    :disabled="!inStock">
+                      Adicionar ao Carrinho
+            </button>
           </div>
         </div>
       </div>
