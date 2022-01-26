@@ -14,8 +14,30 @@ export default {
   },
   data(){
     return {
-
+      tasks: []
     }
+  },
+  created() {
+    this.tasks = [
+      {
+        id:1,
+        text: "Go to school",
+        day: "March 1st at 10:03am",
+        reminder: 'true'
+      },
+      {
+        id:2,
+        text: "Go lunch",
+        day: "March 1st at 12:20pm",
+        reminder: 'true'
+      },
+      {
+        id:3,
+        text: "Go home",
+        day: "March 1st at 4:50pm",
+        reminder: 'false'
+      },
+    ]
   }
 }
 </script>
