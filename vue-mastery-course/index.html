@@ -9,13 +9,22 @@
       src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"
       defer
     ></script>
-    <script src="./main.js" defer></script>
     <title>Vue.JS Course</title>
   </head>
   <body>
     <div id="app">
       <div class="nav-bar"></div>
+      
       <p>Itens no Carrinho: {{ cart }}</p>
+
+      <product-display></product-display>
+
+      <script src="./main.js"></script>
+      <script src="./components/ProductDisplay.js"></script>
+
+      <script>
+        const mountedApp = app.mount('#app')
+      </script>
     </div>
   </body>
 </html>
