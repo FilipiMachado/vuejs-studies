@@ -13,9 +13,9 @@ export default {
   components: {
       Button
   },
-  props: [
-    'title'
-  ],
+  props: {
+      title: String
+  },
   data() {
     return {};
   },

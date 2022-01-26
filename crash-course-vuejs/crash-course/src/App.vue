@@ -42,7 +42,7 @@ body {
 }
 .btn {
   display: inline-block;
-  background: #000;
+  background: #4EBC7D;
   color: #fff;
   border: none;
   padding: 10px 20px;
