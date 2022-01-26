@@ -1,14 +1,32 @@
-<template></template>
+<template>
+  <header>
+    <h1>{{ title }}</h1>
+    <Button />
+  </header>
+</template>
 
 <script>
+import Button from "./Button.vue"
+
 export default {
   name: "Header",
+  components: {
+      Button
+  },
+  props: [
+    'title'
+  ],
   data() {
-    return {
-        
-    };
+    return {};
   },
 };
 </script>
 
-<style></style>
+<style scoped>
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+</style>
