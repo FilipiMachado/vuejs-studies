@@ -19,18 +19,10 @@
 <script>
 export default {
   props: {
-    name: {
-      type: String
-    },
-    phoneNumber: {
-      type: String
-    },
-    emailAddress: {
-      type: String
-    },
-    isFavorite: {
-      type: String
-    }
+    name: String,
+    phoneNumber: String,
+    emailAddress: String,
+    isFavorite: String
   },
   /* [
     'name',
