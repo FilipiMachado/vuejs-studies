@@ -4,14 +4,19 @@
       <h1>My Friends</h1>
     </header>
     <ul>
-      <friend-contact></friend-contact>
-      <friend-contact></friend-contact>
+      <FriendContact/>
+      <FriendContact/>
     </ul>
   </section>
 </template>
 
 <script>
+import FriendContact from './components/FriendContact.vue'
+
 export default {
+  components: {
+    FriendContact
+  },
   data() {
     return {
       friends: [
