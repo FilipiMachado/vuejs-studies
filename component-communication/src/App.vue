@@ -29,12 +29,14 @@ export default {
           name: "Manuel Loco",
           phone: "0123 45678 90",
           email: "manuel@localhost.com",
+          isFavorite: true
         },
         {
           id: "julie",
           name: "Juca Jones",
           phone: "0987 654421 21",
           email: "julie@localhost.com",
+          isFavorite: false
         },
       ],
     };
