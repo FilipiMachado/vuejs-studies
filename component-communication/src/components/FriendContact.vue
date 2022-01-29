@@ -19,6 +19,7 @@
 <script>
 export default {
   props: {
+    id: String,
     name: String,
     phoneNumber: String,
     emailAddress: String,
@@ -41,7 +42,7 @@ export default {
       this.detailsAreVisible = !this.detailsAreVisible;
     },
     toggleFavorite(){
-      this.$emit('toggle-favorite')
+      this.$emit('toggle-favorite', this.id)
       //this.friendIsFavorite = !this.friendIsFavorite
     }
   }

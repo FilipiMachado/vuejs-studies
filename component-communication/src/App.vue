@@ -6,10 +6,12 @@
     <ul>
       <FriendContact v-for="friend in friends"
                      :key="friend.id"
+                     :id="friend.id"
                      :name="friend.name" 
                      :phone-number="friend.phone" 
                      :email-address="friend.email"
-                     :is-favorite='true'/>
+                     :is-favorite='friend.isFavorite'
+                     v-on:toggle-favorite="toggleFavoriteStatus"/>
     </ul>
   </section>
 </template>
@@ -39,8 +41,13 @@ export default {
           isFavorite: false
         },
       ],
-    };
+    }
   },
+  methods: {
+    toggleFavoriteStatus(friendId){
+      
+    }
+  }
 };
 </script>
 
