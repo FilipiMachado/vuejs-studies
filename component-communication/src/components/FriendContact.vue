@@ -32,7 +32,7 @@ export default {
     'emailAddress'
   ], */
   name: 'FriendContact',
-  emits: ['delete-friend'],
+  emits: ['toggle-favorite','delete-friend'],
   data() {
     return {
       detailsAreVisible: false,
