@@ -1,6 +1,6 @@
 <template>
-    <form onSubmit.prevent>
-      <input type="text">
+    <form v-on:click.prevent="onSubmit">
+      <input v-model="newFriendText" type="text">
       <button>Send Form</button>
     </form>
 </template>
@@ -9,7 +9,14 @@
 export default {
     name: 'NewFriend',
     data() {
-      return {}  
+      return {
+          newFriendText: ''
+      }  
     },
+    methods: {
+      onSubmit() {
+        console.log(this.newFriendText);
+      }
+    }
 }
 </script>
