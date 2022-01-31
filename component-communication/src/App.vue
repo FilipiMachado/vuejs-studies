@@ -4,15 +4,15 @@
       <h1>My Friends</h1>
     </header>
     <ul>
-    <NewFriend v-on:add-contact="addContact"/>
+    <NewFriend v-on:add-contact="addNewContact"/>
     <FriendContact v-for="friend in friends"
-                    :key="friend.id"
-                    :id="friend.id"
-                    :name="friend.name" 
-                    :phone-number="friend.phone" 
-                    :email-address="friend.email"
-                    :is-favorite='friend.isFavorite'
-                    v-on:toggle-favorite="toggleFavoriteStatus"/>
+                   :key="friend.id"
+                   :id="friend.id"
+                   :name="friend.name" 
+                   :phone-number="friend.phone" 
+                   :email-address="friend.email"
+                   :is-favorite='friend.isFavorite'
+                   v-on:toggle-favorite="toggleFavoriteStatus"/>
     </ul>
   </section>
 </template>
@@ -51,7 +51,7 @@ export default {
       const identifiedFriend = this.friends.find(friend => friend.id == friendId)
       identifiedFriend.isFavorite = !identifiedFriend.isFavorite
     },
-    addContact(name, phone, email){
+    addNewContact(name, phone, email){
       const newFriendContact = {
         id: new Date().toISOString(),
         name: name,
