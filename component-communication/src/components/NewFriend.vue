@@ -1,19 +1,19 @@
 <template>
-  <form>
+  <form v-on:submit.prevent="onSubmit">
     <div>
       <label>Name</label>
-      <input v-model="newFriendText" type="text" />
+      <input v-model="enteredName" type="text" />
     </div>
     <div>
       <label>Phone</label>
-      <input v-model="newFriendText" type="tel" />
+      <input v-model="enteredPhone" type="tel" />
     </div>
     <div>
       <label>E-mail</label>
-      <input v-model="newFriendText" type="email" />
+      <input v-model="enteredEmail" type="email" />
     </div>
     <div>
-      <button v-on:click.prevent="onSubmit">Add Contact</button>
+      <button>Add Contact</button>
     </div>
   </form>
 </template>
@@ -21,15 +21,18 @@
 <script>
 export default {
   name: "NewFriend",
+  emits: ['add-contact'],
   props: {},
   data() {
     return {
-      newFriendText: "",
+      enteredName: "",
+      enteredPhone: "",
+      enteredEmail: "",
     };
   },
   methods: {
     onSubmit() {
-      console.log(this.newFriendText);
+      this.$emit('add-contact')
     },
   },
 };
