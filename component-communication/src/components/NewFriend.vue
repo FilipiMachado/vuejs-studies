@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     onSubmit() {
-      this.$emit('add-contact')
+      this.$emit('add-contact', this.enteredName, this.enteredPhone, this.enteredEmail)
     },
   },
 };
