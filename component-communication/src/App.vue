@@ -4,24 +4,27 @@
       <h1>My Friends</h1>
     </header>
     <ul>
-      <FriendContact v-for="friend in friends"
-                     :key="friend.id"
-                     :id="friend.id"
-                     :name="friend.name" 
-                     :phone-number="friend.phone" 
-                     :email-address="friend.email"
-                     :is-favorite='friend.isFavorite'
-                     v-on:toggle-favorite="toggleFavoriteStatus"/>
+    <NewFriend/>
+    <FriendContact v-for="friend in friends"
+                    :key="friend.id"
+                    :id="friend.id"
+                    :name="friend.name" 
+                    :phone-number="friend.phone" 
+                    :email-address="friend.email"
+                    :is-favorite='friend.isFavorite'
+                    v-on:toggle-favorite="toggleFavoriteStatus"/>
     </ul>
   </section>
 </template>
 
 <script>
 import FriendContact from './components/FriendContact.vue'
+import NewFriend from './components/NewFriend.vue'
 
 export default {
   components: {
-    FriendContact
+    FriendContact,
+    NewFriend
   },
   data() {
     return {
@@ -34,7 +37,7 @@ export default {
           isFavorite: true
         },
         {
-          id: "julie",
+          id: "juca",
           name: "Juca Jones",
           phone: "0987 654421 21",
           email: "julie@localhost.com",
@@ -107,5 +110,18 @@ header {
   background-color: #ec3169;
   border-color: #ec3169;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
+}
+#app input {
+  font: inherit;
+  padding: 0.15rem;
+}
+#app label {
+  font-weight: bold;
+  margin-right: 1rem;
+  width: 7rem;
+  display: inline-block;
+}
+#app form div {
+  margin: 1rem 0;
 }
 </style>
