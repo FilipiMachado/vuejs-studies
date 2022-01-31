@@ -13,6 +13,7 @@
         {{ emailAddress }}
       </li>
     </ul>
+    <button v-on:click="deleteFriend">Delete</button>
   </li>
 </template>
 
@@ -31,6 +32,7 @@ export default {
     'emailAddress'
   ], */
   name: 'FriendContact',
+  emits: ['delete-friend'],
   data() {
     return {
       detailsAreVisible: false,
@@ -43,7 +45,9 @@ export default {
     },
     toggleFavorite(){
       this.$emit('toggle-favorite', this.id)
-      //this.friendIsFavorite = !this.friendIsFavorite
+    },
+    deleteFriend(){
+      this.$emit('delete',)
     }
   }
 };
