@@ -4,7 +4,7 @@
       <h1>My Friends</h1>
     </header>
     <ul>
-    <NewFriend/>
+    <NewFriend />
     <FriendContact v-for="friend in friends"
                     :key="friend.id"
                     :id="friend.id"
@@ -81,7 +81,8 @@ header {
   padding: 0;
   list-style: none;
 }
-#app li {
+#app li,
+#app form {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   margin: 1rem auto;
   border-radius: 10px;
