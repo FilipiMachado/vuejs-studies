@@ -4,15 +4,15 @@
       <h1>My Friends</h1>
     </header>
     <ul>
-    <NewFriend v-on:add-contact="addNewContact"/>
-    <FriendContact v-for="friend in friends"
-                   :key="friend.id"
-                   :id="friend.id"
-                   :name="friend.name" 
-                   :phone-number="friend.phone" 
-                   :email-address="friend.email"
-                   :is-favorite='friend.isFavorite'
-                   v-on:toggle-favorite="toggleFavoriteStatus"/>
+      <NewFriend v-on:add-new-contact="addNewContact"/>
+      <FriendContact v-for="friend in friends"
+                    :key="friend.id"
+                    :id="friend.id"
+                    :name="friend.name" 
+                    :phone-number="friend.phone" 
+                    :email-address="friend.email"
+                    :is-favorite='friend.isFavorite'
+                    v-on:toggle-favorite="toggleFavoriteStatus"/>
     </ul>
   </section>
 </template>
@@ -44,6 +44,7 @@ export default {
           isFavorite: false
         },
       ],
+      deleted: true
     }
   },
   methods: {
@@ -60,6 +61,9 @@ export default {
         isFavorite: false
       }
       this.friends.push(newFriendContact)
+    },
+    deleteContact(){
+     
     }
   }
 };

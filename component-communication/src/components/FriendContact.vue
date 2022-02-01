@@ -47,7 +47,7 @@ export default {
       this.$emit('toggle-favorite', this.id)
     },
     deleteFriend(){
-      this.$emit('delete',)
+      this.$emit('delete-friend',)
     }
   }
 };

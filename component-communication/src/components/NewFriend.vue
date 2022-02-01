@@ -1,5 +1,5 @@
 <template>
-  <form v-on:submit.prevent="onSubmit">
+  <form v-on:submit.prevent="addContact">
     <div>
       <label>Name</label>
       <input v-model="enteredName" type="text" />
@@ -21,7 +21,7 @@
 <script>
 export default {
   name: "NewFriend",
-  emits: ['add-contact'],
+  emits: ['add-new-contact'],
   props: {},
   data() {
     return {
@@ -31,8 +31,8 @@ export default {
     };
   },
   methods: {
-    onSubmit() {
-      this.$emit('add-contact', this.enteredName, this.enteredPhone, this.enteredEmail)
+    addContact() {
+      this.$emit('add-new-contact', this.enteredName, this.enteredPhone, this.enteredEmail)
     },
   },
 };
