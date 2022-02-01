@@ -12,6 +12,7 @@
                     :phone-number="friend.phone" 
                     :email-address="friend.email"
                     :is-favorite='friend.isFavorite'
+                    v-on:delete-friend='deleteContact'
                     v-on:toggle-favorite="toggleFavoriteStatus"/>
     </ul>
   </section>
@@ -62,8 +63,8 @@ export default {
       }
       this.friends.push(newFriendContact)
     },
-    deleteContact(){
-     
+    deleteContact(friendId){
+      this.friends = this.friends.filter(friend => friend.id !== friendId)
     }
   }
 };
