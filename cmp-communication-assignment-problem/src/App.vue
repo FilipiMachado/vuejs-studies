@@ -1,9 +1,17 @@
 <template>
-    
+    <ActiveUser />
+    <UserData />
 </template>
 
 <script>
+import ActiveUser from './components/ActiveUser.vue'
+import UserData from './components/UserData.vue'
+
 export default {
+    components: {
+      ActiveUser,
+      UserData
+    },
     data() {
       return {
 
