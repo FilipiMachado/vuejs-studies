@@ -1,5 +1,5 @@
 <template>
-    <ActiveUser name='name'/>
+    <ActiveUser :username="user.name" :userage="user.age"/>
     <UserData />
 </template>
 
@@ -15,7 +15,10 @@ export default {
     },
     data() {
       return {
-
+        user: {
+          name: 'Zueiro',
+          age: 25
+        }
       }
     },
     
