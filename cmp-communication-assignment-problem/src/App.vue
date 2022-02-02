@@ -8,6 +8,7 @@ import ActiveUser from './components/ActiveUser.vue'
 import UserData from './components/UserData.vue'
 
 export default {
+    name: 'App',
     components: {
       ActiveUser,
       UserData
@@ -30,10 +31,13 @@ export default {
 // Task 3: Add user data and ensure it contains a name and age
 // User data should be output in ActiveUser
 // It should be updated via the UserData component
+
 }
 </script>
 
+<style scoped>
 
+</style>
 
 
 
