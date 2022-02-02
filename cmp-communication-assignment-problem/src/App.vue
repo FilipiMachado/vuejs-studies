@@ -1,5 +1,5 @@
 <template>
-    <ActiveUser />
+    <ActiveUser name='name'/>
     <UserData />
 </template>
 
