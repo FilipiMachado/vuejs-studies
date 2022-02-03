@@ -1,11 +1,16 @@
 <template>
   <ul>
-    <h1>Learning Resources</h1>
+    <ListItems />
   </ul>
 </template>
 
 <script>
+import ListItems from "./components/ListItems.vue"
+
 export default {
+  components: {
+    ListItems
+  },
   data() {
     return {
       storedResources: [
