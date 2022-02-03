@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <BaseCard>
     <header>
     <div>
       <h3>{{ fullName }}</h3>
@@ -7,16 +7,18 @@
     </div>
     <p>{{ infoText }}</p>
     </header>
-  </section>
+  </BaseCard>
 </template>
 
 <script>
 import BaseBadge from './BaseBadge.vue'
+import BaseCard from './BaseCard.vue'
 
 export default {
   name: 'UserInfo',
   components: {
-    BaseBadge
+    BaseBadge,
+    BaseCard
   },
   props: ['fullName', 'infoText', 'role'],
 };

@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <BaseCard>
     <h2>Available Badges</h2>
     <ul>
       <li>
@@ -9,16 +9,18 @@
         <BaseBadge type="author" caption="AUTHOR" />
       </li>
     </ul>
-  </section>
+  </BaseCard>
 </template>
 
 <script>
 import BaseBadge from './BaseBadge.vue'
+import BaseCard from './BaseCard.vue'
 
 export default {
   name: 'BadgeList',
   components: {
-    BaseBadge
+    BaseBadge,
+    BaseCard
   },
   data() {
     return{}
