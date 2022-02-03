@@ -1,10 +1,12 @@
 <template>
   <section>
+    <header>
     <div>
       <h3>{{ fullName }}</h3>
       <BaseBadge :type="role" :caption="role.toUpperCase()" />
     </div>
     <p>{{ infoText }}</p>
+    </header>
   </section>
 </template>
 
