@@ -1,18 +1,28 @@
 <template>
-    <li>Item 1</li>
-    <li>Item 2</li>
-    <li>Item 3</li>
+  <li>
+    <div>
+      <header>
+        <h3></h3>
+        <button>Delete</button>
+      </header>
+    </div>
+    <p></p>
+    <nav>
+        <a href>View Resource</a>
+    </nav>
+  </li>
 </template>
 
 <script>
 export default {
-    name: 'ListItems',
-    data() {
-        return {}
-    },
-}
+  name: 'ListItems',
+  props: {
+      
+  },
+  data() {
+    return {};
+  },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
