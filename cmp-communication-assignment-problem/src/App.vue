@@ -1,6 +1,6 @@
 <template>
     <ActiveUser :username="user.name" :userage="user.age"/>
-    <UserData />
+    <UserData v-on:set-data='setUserData'/>
 </template>
 
 <script>
@@ -21,6 +21,14 @@ export default {
         }
       }
     },
+    methods: {
+      setUserData(name, age){
+        this.user = {
+          name: name,
+          age: age
+        }
+      }
+    }
     
 // Task 1: 
 // Add two components to the app: 

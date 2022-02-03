@@ -1,16 +1,27 @@
 <template>
-    <input type="text">
-    <input type="number">
+    <form v-on:click.prevent="submitData">
+        <input type="text" placeholder="Your Name" v-model="enteredName" />
+        <input type="number" placeholder="Your Age" v-model="enteredAge" />
+        <button>Submit</button>
+    </form>
 </template>
 
 <script>
 export default {
-    data() {
-        return {}
-    },
-}
+  name: "UserData",
+  emits: ['set-data'],
+  data() {
+    return {
+      enteredName: "",
+      enteredAge: 0,
+    };
+  },
+  methods: {
+    submitData(){
+        this.$emit("set-data", this.enteredName, this.enteredAge)
+    }
+  },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
