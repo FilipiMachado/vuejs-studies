@@ -4,6 +4,7 @@
 
 <script>
 export default {
+  name: 'BaseBadge',
   props: ['type', 'caption'],
   computed: {
     classes() {

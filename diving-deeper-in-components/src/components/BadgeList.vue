@@ -3,14 +3,28 @@
     <h2>Available Badges</h2>
     <ul>
       <li>
-        <base-badge type="admin" caption="ADMIN"></base-badge>
+        <BaseBadge type="admin" caption="ADMIN" />
       </li>
       <li>
-        <base-badge type="author" caption="AUTHOR"></base-badge>
+        <BaseBadge type="author" caption="AUTHOR" />
       </li>
     </ul>
   </section>
 </template>
+
+<script>
+import BaseBadge from './BaseBadge.vue'
+
+export default {
+  name: 'BadgeList',
+  components: {
+    BaseBadge
+  },
+  data() {
+    return{}
+  },
+}
+</script>
 
 <style>
 section h2 {

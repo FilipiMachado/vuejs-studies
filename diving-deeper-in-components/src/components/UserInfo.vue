@@ -2,14 +2,20 @@
   <section>
     <div>
       <h3>{{ fullName }}</h3>
-      <base-badge :type="role" :caption="role.toUpperCase()"></base-badge>
+      <BaseBadge :type="role" :caption="role.toUpperCase()" />
     </div>
     <p>{{ infoText }}</p>
   </section>
 </template>
 
 <script>
+import BaseBadge from './BaseBadge.vue'
+
 export default {
+  name: 'UserInfo',
+  components: {
+    BaseBadge
+  },
   props: ['fullName', 'infoText', 'role'],
 };
 </script>

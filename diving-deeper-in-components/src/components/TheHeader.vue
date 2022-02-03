@@ -4,6 +4,15 @@
   </header>
 </template>
 
+<script>
+export default {
+  name: 'TheHeader',
+  data() {
+    return {}
+  },
+}
+</script>
+
 <style>
   header {
     width: 100%;
