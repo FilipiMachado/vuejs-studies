@@ -1,15 +1,11 @@
 <template>
   <ul>
-    <ListItems v-for="res in storedResources" 
-               :key="res.id"
-               :title="res.title"
-               :description="res.description"
-               :link="res.link"/>
+    <ListItems />
   </ul>
 </template>
 
 <script>
-import ListItems from "./components/ListItems.vue"
+import ListItems from "./components/resources/ListItems.vue"
 
 export default {
   components: {
