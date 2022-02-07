@@ -13,7 +13,7 @@
   </li>
 </template>
 
-<script>
+<script>A
 export default {
   name: 'ListItems',
   props: {
