@@ -1,21 +1,26 @@
 <template>
   <li>
-    <div>
+    <BaseCard>
       <header>
         <h3>{{ title }}</h3>
         <button>Delete</button>
       </header>
-    </div>
     <p>{{ desc }}</p>
     <nav>
       <a :href="link">View Resource</a>
     </nav>
+    </BaseCard>
   </li>
 </template>
 
 <script>
+import BaseCard from "../UI/BaseCard.vue"
+
 export default {
   name: 'ListItems',
+  components: {
+    BaseCard
+  },
   props: {
     title: {
       type: String,

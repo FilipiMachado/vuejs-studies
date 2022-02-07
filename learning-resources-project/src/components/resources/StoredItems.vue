@@ -18,11 +18,9 @@ export default {
   components: {
     ListItems,
   },
-  props: {
-    resources: {
-      type: Object,
-    },
-  },
+  props: [
+    'resources'
+  ],
   data() {},
 };
 </script>
