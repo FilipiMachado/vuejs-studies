@@ -58,6 +58,11 @@ export default {
   data() {
     
   },
+  methods: {
+    submitForm(){
+      
+    }
+  },
 }
 </script>
 
