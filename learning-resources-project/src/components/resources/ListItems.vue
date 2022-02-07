@@ -1,6 +1,6 @@
 <template>
   <li>
-    <BaseCard>
+    <div>
       <header>
         <h3>{{ title }}</h3>
         <button>Delete</button>
@@ -9,13 +9,11 @@
     <nav>
       <a :href="link">View Resource</a>
     </nav>
-    </BaseCard>
+    </div>
   </li>
 </template>
 
 <script>
-import BaseCard from "../UI/BaseCard.vue"
-
 export default {
   name: 'ListItems',
   components: {

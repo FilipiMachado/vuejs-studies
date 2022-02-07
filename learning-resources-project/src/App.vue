@@ -1,13 +1,17 @@
 <template>
-    <StoredItems :resources="storedResources"/>
+  <base-card>
+  <!-- <StoredItems :resources="storedResources"/> -->
+  <base-card/>
 </template>
 
 <script>
-import StoredItems from './components/resources/StoredItems.vue';
+//import StoredItems from './components/resources/StoredItems.vue';
+import BaseCard from "./components/UI/BaseCard.vue"
 
 export default {
   components: {
-    StoredItems,
+    //StoredItems,
+    BaseCard
   },
   data() {
     return {
