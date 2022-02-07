@@ -1,12 +1,12 @@
 <template>
-  <form>
+  <form v-on:submit.prevent="submitForm">
     <div class="form-control">
       <label for="user-name">Your Name</label>
-      <input id="user-name" name="user-name" type="text" placeholder="Digit your name..."/>
+      <input id="user-name" name="user-name" type="text" v-model="userName"/>
     </div>
     <div class="form-control">
       <label for="age">Your Age (Years)</label>
-      <input id="age" name="age" type="number" />
+      <input id="age" name="age" type="number" v-model="userAge"/>
     </div>
     <div class="form-control">
       <label for="referrer">How did you hear about us?</label>
@@ -56,11 +56,15 @@
 export default {
   name: 'TheForm',
   data() {
-    
+    return {
+      userName: '',
+      userAge: null
+    }
   },
   methods: {
     submitForm(){
-      
+      console.log(`Username: ${this.userName} 
+User Age: ${this.userAge}`)
     }
   },
 }
