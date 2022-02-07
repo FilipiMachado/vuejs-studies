@@ -2,7 +2,7 @@
   <form>
     <div class="form-control">
       <label for="user-name">Your Name</label>
-      <input id="user-name" name="user-name" type="text" />
+      <input id="user-name" name="user-name" type="text" placeholder="Digit your name..."/>
     </div>
     <div class="form-control">
       <label for="age">Your Age (Years)</label>
@@ -51,6 +51,15 @@
     </div>
   </form>
 </template>
+
+<script>
+export default {
+  name: 'TheForm',
+  data() {
+    
+  },
+}
+</script>
 
 <style scoped>
 form {
