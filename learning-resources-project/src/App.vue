@@ -1,6 +1,10 @@
 <template>
   <ul>
-    <ListItems />
+    <ListItems v-for="item in storedResources"
+               :key="item.id"
+               :title="item.title"
+               :desc="item.description"
+               :link="item.link"/>
   </ul>
 </template>
 
