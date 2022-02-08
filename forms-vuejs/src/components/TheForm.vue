@@ -46,6 +46,10 @@
         <label for="how-other">Other</label>
       </div>
     </div>
+    <div class="form-control">
+      <input type="checkbox" id="confirm-terms" name="confirm-terms" v-model="confirm">
+      <label for="confirm-terms">Agree to terms of use?</label>
+    </div>
     <div>
       <button>Save Data</button>
     </div>
@@ -61,7 +65,8 @@ export default {
       userAge: '',
       referrer: '',
       interest: [],
-      how: []
+      how: [],
+      confirm: false
     }
   },
   methods: {
@@ -73,6 +78,9 @@ Interest: ${this.interest}
 How: ${this.how}`)
     }
   },
+  validateInput(){
+    
+  }
 }
 </script>
 
