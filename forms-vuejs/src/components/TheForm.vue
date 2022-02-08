@@ -2,7 +2,7 @@
   <form v-on:submit.prevent="submitForm">
     <div class="form-control">
       <label for="user-name">Your Name</label>
-      <input id="user-name" name="user-name" type="text" v-model="userName"/>
+      <input id="user-name" name="user-name" type="text" v-model.trim="userName" @blur="validateInput"/>
     </div>
     <div class="form-control">
       <label for="age">Your Age (Years)</label>
@@ -66,7 +66,8 @@ export default {
       referrer: '',
       interest: [],
       how: [],
-      confirm: false
+      confirm: false,
+      userNameValidity: 'pending'
     }
   },
   methods: {
@@ -79,7 +80,11 @@ How: ${this.how}`)
     }
   },
   validateInput(){
-    
+    if (this.userName === '') {
+      this.userNameValidity = 'invalid'
+    } else {
+      this.userNameValidity = 'valid'
+    }
   }
 }
 </script>
