@@ -19,6 +19,7 @@ export default {
   },
   methods: {
     storeSurvey(surveyData) {
+      console.log(surveyData)
       const surveyResult = {
         name: surveyData.userName,
         rating: surveyData.rating,
