@@ -34,7 +34,16 @@ export default {
   methods: {
     loadExperiences() {
       axios.get('https://vue-http-request-9d847-default-rtdb.firebaseio.com/surveys.json').then(response => {
-        console.log(response.data)
+        const results = [];
+        for (const id in response) {
+          results.push({
+            id: id,
+            name: response[id].name,
+            rating: response[id].rating,
+          })
+        this.results = results;
+        console.log(this.results)
+        }
       })
     }
   }
