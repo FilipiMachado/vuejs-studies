@@ -38,8 +38,6 @@
 </template>
 
 <script>
-import axios from "axios";
-
 export default {
   data() {
     return {
@@ -55,12 +53,6 @@ export default {
         return;
       }
       this.invalidInput = false;
-
-      axios.post('https://vue-http-request-9d847-default-rtdb.firebaseio.com/surveys.json', {
-        name: this.enteredName,
-        rating: this.chosenRating
-      })
-
       this.enteredName = '';
       this.chosenRating = null;
     },

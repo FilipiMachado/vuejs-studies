@@ -3,7 +3,7 @@
     <base-card>
       <h2>Submitted Experiences</h2>
       <div>
-        <base-button>Load Submitted Experiences</base-button>
+        <base-button v-on:click="loadExperiences">Load Submitted Experiences</base-button>
       </div>
       <ul>
         <survey-result
@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 import SurveyResult from './SurveyResult.vue';
 
 export default {
@@ -27,6 +29,14 @@ export default {
   data() {
     return {
       results: [],
+    }
+  },
+  methods: {
+    loadExperiences() {
+      axios.post('https://vue-http-request-9d847-default-rtdb.firebaseio.com/surveys.json', {
+        name: this.enteredName,
+        rating: this.chosenRating
+      })
     }
   }
 };
