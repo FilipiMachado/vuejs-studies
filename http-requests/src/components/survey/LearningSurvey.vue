@@ -2,7 +2,7 @@
   <section>
     <base-card>
       <h2>How was you learning experience?</h2>
-      <form @submit.prevent="submitSurvey">
+      <form v-on:submit.prevent="submitSurvey">
         <div class="form-control">
           <label for="name">Your Name</label>
           <input type="text" id="name" name="name" v-model.trim="enteredName" />
@@ -66,7 +66,7 @@ export default {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            name: this.userName,
+            name: this.enteredName,
             rating: this.chosenRating
           }) 
       })
