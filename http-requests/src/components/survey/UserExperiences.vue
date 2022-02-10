@@ -33,9 +33,8 @@ export default {
   },
   methods: {
     loadExperiences() {
-      axios.post('https://vue-http-request-9d847-default-rtdb.firebaseio.com/surveys.json', {
-        name: this.enteredName,
-        rating: this.chosenRating
+      axios.get('https://vue-http-request-9d847-default-rtdb.firebaseio.com/surveys.json').then(response => {
+        console.log(response.data)
       })
     }
   }
