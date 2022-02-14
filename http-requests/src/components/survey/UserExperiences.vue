@@ -6,7 +6,11 @@
         <base-button v-on:click="loadExperiences">Load Submitted Experiences</base-button>
       </div>
       <p v-if="isLoading">Loading...</p>
-      <ul v-if="!isLoading">
+      <p v-else-if="!isLoading && results.length == 0">No stored experiences found. Start adding some survey results first.</p>
+      <p v-else-if="!isLoading && error">
+        {{ this.error }}
+      </p>
+      <ul v-else-if="!isLoading && results && results.length > 0">
         <survey-result
           v-for="result in results"
           :key="result.id"
@@ -31,6 +35,7 @@ export default {
     return {
       results: [],
       isLoading: false,
+      error: null,
     }
   },
   methods: {
@@ -48,11 +53,12 @@ export default {
             rating: data[id].rating
           })
         }
-        console.log(results)
         this.results = results
+      }).catch(error => {
+        error = "Failed to get data = please try again later."
+        this.error = error
       })
       }, 1000)
-      
     }
   },
   mounted(){
