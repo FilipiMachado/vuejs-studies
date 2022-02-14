@@ -43,18 +43,8 @@ export default {
             rating: data[id].rating
           })
         }
+        console.log(results)
         this.results = results
-        console.log(this.results)
-        /* const results = [];
-        for (const id in response) {
-          results.push({
-            id: id,
-            name: response[id].name,
-            rating: response[id].rating,
-          })
-        this.results = results;
-        console.log(this.results)
-        } */
       })
     }
   }
