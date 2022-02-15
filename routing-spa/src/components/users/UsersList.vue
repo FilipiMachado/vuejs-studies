@@ -12,6 +12,9 @@ export default {
     UserItem,
   },
   inject: ['users'],
+  methods: {
+    
+  }
 };
 </script>
 
