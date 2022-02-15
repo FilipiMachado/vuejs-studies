@@ -6,11 +6,11 @@
         <base-button v-on:click="loadExperiences">Load Submitted Experiences</base-button>
       </div>
       <p v-if="isLoading">Loading...</p>
-      <p v-else-if="!isLoading && results.length == 0">No stored experiences found. Start adding some survey results first.</p>
       <p v-else-if="!isLoading && error">
         {{ this.error }}
       </p>
-      <ul v-else-if="!isLoading && results && results.length > 0">
+      <p v-else-if="!isLoading && results.length == 0">No stored experiences found. Start adding some survey results first.</p>
+      <ul v-else>
         <survey-result
           v-for="result in results"
           :key="result.id"
@@ -41,6 +41,7 @@ export default {
   methods: {
     loadExperiences() {
       this.isLoading = true;
+      this.error = null;
       setTimeout(() => {
         axios.get('https://vue-http-request-9d847-default-rtdb.firebaseio.com/surveys.json').then(response => {
         this.isLoading = false;
@@ -55,8 +56,9 @@ export default {
         }
         this.results = results
       }).catch(error => {
-        error = "Failed to get data = please try again later."
+        error = "Failed to get data - please try again later."
         this.error = error
+        this.isLoading = false
       })
       }, 1000)
     }
