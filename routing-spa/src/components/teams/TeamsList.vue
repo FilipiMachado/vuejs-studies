@@ -17,6 +17,9 @@ export default {
     TeamsItem,
   },
   inject: ['teams'],
+  methods: {
+    
+  }
 };
 </script>
 

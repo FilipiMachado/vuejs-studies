@@ -26,7 +26,7 @@ export default {
         { id: 'u1', fullName: 'Max Schwarz', role: 'Engineer' },
         { id: 'u2', fullName: 'Max Schwarz', role: 'Engineer' },
       ],
-    };
+    }
   },
 };
 </script>
