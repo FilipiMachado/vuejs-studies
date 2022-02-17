@@ -17,6 +17,9 @@ const store = createStore({
             state.counter = state.counter +  payload.value
         }
     },
+    actions: {
+        
+    },
     getters: {
         finalCounter(state) {
             return state.counter * 2
