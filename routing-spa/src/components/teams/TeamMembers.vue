@@ -30,7 +30,8 @@ export default {
     }
   },
   created() {
-    this.$route.params
+    const teamId = this.$route.params.teamId
+    const selectedTeam = this.teams.find(t => t.id === teamId)
     //this.$route.path // /teams/t1
   }
 };
