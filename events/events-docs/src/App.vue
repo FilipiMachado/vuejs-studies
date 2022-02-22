@@ -1,29 +1,24 @@
 <template>
-  <Counter :counter="counter"/>
-  <button v-on:click="addCounter">Add 1</button>
+  <div>App</div>
 </template>
 
 <script>
-import Counter from './components/Counter.vue'
+
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Counter
+    
   },
-  data(){
+  data() {
     return {
-      counter: 0
+      
     }
   },
   methods: {
-    addCounter(){
-       this.counter += 1
-    }
-  }
+    
+  },
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
