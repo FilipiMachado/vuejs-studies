@@ -18,10 +18,10 @@ export default {
     return {};
   },
   methods: {
-    deleteTask(id){
-      this.$emit('delete-task', id)
-    }
-  }
+    deleteTask(id) {
+      this.$emit("delete-task", id);
+    },
+  },
 };
 </script>
 

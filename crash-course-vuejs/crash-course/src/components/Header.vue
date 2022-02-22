@@ -6,15 +6,15 @@
 </template>
 
 <script>
-import Button from "./Button.vue"
+import Button from "./Button.vue";
 
 export default {
   name: "Header",
   components: {
-      Button
+    Button,
   },
   props: {
-      title: String
+    title: String,
   },
   data() {
     return {};

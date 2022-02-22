@@ -47,7 +47,7 @@ submitForm(){
 name: "",
 confirmedName: "", */
 
-const app = Vue.createApp({
+/* const app = Vue.createApp({
   data() {
     return {
       counter: 0,
@@ -82,5 +82,16 @@ const app = Vue.createApp({
     }
   },
 });
+
+app.mount("#events");
+ */
+
+const app = Vue.createApp({
+  data() {
+    return {
+      
+    }
+  }
+})
 
 app.mount("#events");
