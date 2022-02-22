@@ -1,14 +1,25 @@
 <template>
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Counter :counter="counter"/>
+  <button v-on:click="addCounter">Add 1</button>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Counter from './components/Counter.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Counter
+  },
+  data(){
+    return {
+      counter: 0
+    }
+  },
+  methods: {
+    addCounter(){
+       this.counter += 1
+    }
   }
 }
 </script>
