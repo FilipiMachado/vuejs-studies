@@ -2,7 +2,7 @@
   <div :class="[task.reminder ? 'reminder' : '', 'task']">
     <h3>
       {{ task.text }}
-      <i class="fas fa-times"></i>
+      <i v-on:click="onDelete(task.id)" class="fas fa-times"></i>
     </h3>
     <p>{{ task.day }}</p>
   </div>
@@ -16,6 +16,11 @@ export default {
     },
     data() {
       return {}
+    },
+    methods: {
+      onDelete(id) {
+        console.log(id)
+      }
     },
 }
 </script>
@@ -31,7 +36,7 @@ export default {
   cursor: pointer;
 }
 .task.reminder {
-  border-left: 5px solid green;
+  border-left: 5px solid rgb(0, 128, 107);
 }
 .task h3 {
   display: flex;
