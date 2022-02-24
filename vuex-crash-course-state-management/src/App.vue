@@ -39,7 +39,7 @@ export default {
         id: 3,
         text: "Dentista Fil (clareamento)",
         day: 'March 25st at 4:30pm',
-        reminder: true
+        reminder: false
       },
     ]
   }
