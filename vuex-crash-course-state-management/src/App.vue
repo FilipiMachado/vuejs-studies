@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <Header />
-    <Tasks :tasks="tasks"/>
+    <Tasks v-on:delete-task="deleteTask" :tasks="tasks" />
   </div>
 </template>
 
@@ -20,7 +20,11 @@ export default {
       tasks: []
     }
   },
-  methods: {},
+  methods: {
+    deleteTask(id) {
+      console.log(id)
+    }
+  },
   created() {
     this.tasks = [
       {
