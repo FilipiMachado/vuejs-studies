@@ -1,5 +1,5 @@
 <template>
-  <form @submit="onSubmit" class="add-form">
+  <form @submit.prevent="onSubmit" class="add-form">
     <div class="form-control">
       <label>Task</label>
       <input type="text" 
@@ -15,10 +15,14 @@
              name="day"
              placeholder="Add Day & Time" />
     </div>
+    {{ day }}
     <div class="form-control form-control-check">
       <label>Set Reminder</label>
-      <input type="checkbox" v-model="reminder" name="reminder" />
+      <input type="checkbox" 
+             v-model="reminder" 
+             name="reminder" />
     </div>
+    {{ reminder }}
     <input type="submit" 
            value="Save Task" 
            class="btn btn-block" />
@@ -36,7 +40,21 @@ export default {
     };
   },
   methods: {
+    onSubmit() {
+      if (!this.text) {
+        alert('Please add a task')
+        return
+      }
 
+      const newTask = {
+        id: Math.floor(Math.random() * 100),
+        text: this.text,
+        day: this.day,
+        reminder: this.reminder
+      }
+
+      
+    }
   },
 };
 </script>
