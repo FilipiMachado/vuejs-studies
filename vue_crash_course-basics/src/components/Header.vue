@@ -1,7 +1,10 @@
 <template>
   <header>
     <h1>{{ title }}</h1>
-    <Button v-on:toggle-add-task="$emit('toggle-add-task')" text="Add Task" color="green"/>
+    <Button v-on:button-click="$emit('toggle-add-task')" 
+            :text="!showAddTask ? 'Add Task' : 'Hide Task'" 
+            :color="!showAddTask ? 'green' : 'red'"
+            />
   </header>
 </template>
 
@@ -17,7 +20,8 @@ export default {
     title: {
       type: String,
       default: "Task Tracker"
-    }
+    },
+    showAddTask: Boolean
   },
   data() {
     return {}

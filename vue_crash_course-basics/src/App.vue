@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <Header v-on:toggle-add-task="toggleAddTask"/>
+    <Header v-on:toggle-add-task="toggleAddTask"
+            :showAddTask="showAddTask"/>
     <div v-show="showAddTask">
       <AddTask v-on:add-task="addNewTask"/>
     </div>
@@ -41,7 +42,7 @@ export default {
       this.tasks.push(task)
     },
     toggleAddTask() {
-      this.showAddTask = true
+      this.showAddTask = !this.showAddTask
     }
   },
   created() {
