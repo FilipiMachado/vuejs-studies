@@ -1,7 +1,9 @@
 <template>
   <div class="container">
     <Header />
-    <Tasks v-on:delete-task="deleteTask" :tasks="tasks" />
+    <Tasks v-on:toggle-reminder="toggleReminder"
+           v-on:delete-task="deleteTask" 
+           :tasks="tasks" />
   </div>
 </template>
 
@@ -22,7 +24,12 @@ export default {
   },
   methods: {
     deleteTask(id) {
-      this.tasks = this.tasks.filter((task) => task.id !== id)
+      if (confirm("Are you sure you want to delete?")) {
+        this.tasks = this.tasks.filter((task) => task.id !== id)
+      }
+    },
+    toggleReminder(id) {
+      this.tasks = this.tasks.map((task) => task.id === id ? {...task, reminder: !task.reminder} : task)
     }
   },
   created() {
