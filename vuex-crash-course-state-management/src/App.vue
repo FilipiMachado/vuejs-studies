@@ -13,9 +13,33 @@ export default {
     Header,
   },
   data() {
-    return {}
+    return {
+      tasks: []
+    }
   },
   methods: {},
+  created() {
+    this.tasks = [
+      {
+        id: 1,
+        text: "Dentista Vicoia",
+        day: 'March 1st at 4:30pm',
+        reminder: true
+      },
+      {
+        id: 2,
+        text: "Dentista Zeca (aparelho)",
+        day: 'March 8st at 5:30pm',
+        reminder: true
+      },
+      {
+        id: 3,
+        text: "Dentista Fil (clareamento)",
+        day: 'March 25st at 4:30pm',
+        reminder: true
+      },
+    ]
+  }
 };
 </script>
 
