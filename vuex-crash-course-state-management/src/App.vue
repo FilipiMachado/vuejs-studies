@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <Header />
+    <AddTask />
     <Tasks v-on:toggle-reminder="toggleReminder"
            v-on:delete-task="deleteTask" 
            :tasks="tasks" />
-    <AddTask />
   </div>
 </template>
 
