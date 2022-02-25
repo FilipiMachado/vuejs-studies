@@ -9,6 +9,7 @@
       v-on:delete-task="deleteTask"
       :tasks="tasks"
     />
+    <Footer />
   </div>
 </template>
 
@@ -16,6 +17,7 @@
 import Header from "./components/Header.vue";
 import Tasks from "./components/Tasks.vue";
 import AddTask from "./components/AddTask.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
@@ -23,6 +25,7 @@ export default {
     Header,
     Tasks,
     AddTask,
+    Footer
   },
   data() {
     return {
