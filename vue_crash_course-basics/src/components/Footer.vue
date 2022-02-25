@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>Copyright</p>
+    <p>Copyright &copy; 2022</p>
     <a href="/about">About</a>
   </footer>
 </template>
