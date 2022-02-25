@@ -7,7 +7,6 @@
              name="text" 
              placeholder="Add Task" />
     </div>
-    {{ text }}
     <div class="form-control">
       <label>Day & Time</label>
       <input type="text"
@@ -15,14 +14,12 @@
              name="day"
              placeholder="Add Day & Time" />
     </div>
-    {{ day }}
     <div class="form-control form-control-check">
       <label>Set Reminder</label>
       <input type="checkbox" 
              v-model="reminder" 
              name="reminder" />
     </div>
-    {{ reminder }}
     <input type="submit" 
            value="Save Task" 
            class="btn btn-block" />
