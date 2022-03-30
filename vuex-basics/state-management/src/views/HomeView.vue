@@ -1,8 +1,12 @@
 <template>
   <div>
     {{ $store.state.user.first_name }}
+    {{ $store.state.user.password }}
+    <label>Username</label>
     <input type="text" v-model="myName" />
-    <button @click.prevent.stop="saveName">Salvar</button>
+    <label>Password</label>
+    <input type="password" v-model="myPassword" />
+    <button @click.prevent="saveUser" class="btn btn-primary">Salvar</button>
   </div>
 </template>
 
@@ -13,16 +17,26 @@ export default {
   data() {
     return {
       myName: undefined,
+      myPassword: undefined,
     };
   },
   methods: {
-    saveName() {},
+    saveUser() {
+      // Mutation
+      // this.$store.commit();
+      // Action
+      /* this.$store.dispatch("saveUserName", this.myName);
+      this.$store.dispatch("saveUserPassword", this.myPassword); */
+      this.$store.commit("saveUserName", this.myName);
+      this.$store.commit("saveUserPassword", this.myPassword);
+    },
   },
 };
 </script>
 
 <style scoped>
-input {
+input,
+label {
   display: block;
   margin: 20px auto;
 }
