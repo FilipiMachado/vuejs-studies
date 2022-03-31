@@ -13,7 +13,11 @@ export default new Vuex.Store({
     },
   },
   getters: {},
-  mutations: {},
+  mutations: {
+    saveFirstName(state, payload) {
+      state.user.first_name = payload;
+    },
+  },
   actions: {},
   modules: {},
 });

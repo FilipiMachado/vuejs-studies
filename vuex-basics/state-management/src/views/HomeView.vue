@@ -1,6 +1,7 @@
 <template>
   <div>
     <label>Nome</label>
+    {{ $store.state.user.first_name }}
     <input v-model="myName" type="text" />
     <label>Sobrenome</label>
     <input v-model="myLastName" type="text" />
@@ -28,6 +29,7 @@ export default {
     saveUser() {
       // Mutation
       // this.$store.commit();
+      this.$store.commit("saveFirstName", this.myName);
       // Action
       // this.$store.dispatch();
     },
