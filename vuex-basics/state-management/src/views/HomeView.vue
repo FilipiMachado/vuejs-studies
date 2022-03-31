@@ -1,13 +1,14 @@
 <template>
   <div>
     <label>Nome</label>
-    <input type="text" />
+    <input v-model="myName" type="text" />
     <label>Sobrenome</label>
-    <input type="text" />
+    <input v-model="myLastName" type="text" />
     <label>Senha</label>
-    <input type="password" />
+    <input v-model="myPassword" type="password" />
     <label>Email</label>
-    <input type="email" />
+    <input v-model="myEmail" type="email" />
+    <button>Salvar</button>
   </div>
 </template>
 
@@ -39,5 +40,18 @@ input,
 label {
   display: block;
   margin: 20px auto;
+}
+
+button {
+  border: none;
+  background-color: #ff6347;
+  padding: 12px 15px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #fc3917;
+  transition: all 0.5s;
 }
 </style>
