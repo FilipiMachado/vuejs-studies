@@ -1,12 +1,13 @@
 <template>
   <div>
-    {{ $store.state.user.first_name }}
-    {{ $store.state.user.password }}
-    <label>Username</label>
-    <input type="text" v-model="myName" />
-    <label>Password</label>
-    <input type="password" v-model="myPassword" />
-    <button @click.prevent="saveUser" class="btn btn-primary">Salvar</button>
+    <label>Nome</label>
+    <input type="text" />
+    <label>Sobrenome</label>
+    <input type="text" />
+    <label>Senha</label>
+    <input type="password" />
+    <label>Email</label>
+    <input type="email" />
   </div>
 </template>
 
@@ -17,7 +18,9 @@ export default {
   data() {
     return {
       myName: undefined,
+      myLastName: undefined,
       myPassword: undefined,
+      myEmail: undefined,
     };
   },
   methods: {
@@ -25,10 +28,7 @@ export default {
       // Mutation
       // this.$store.commit();
       // Action
-      /* this.$store.dispatch("saveUserName", this.myName);
-      this.$store.dispatch("saveUserPassword", this.myPassword); */
-      this.$store.commit("saveUserName", this.myName);
-      this.$store.commit("saveUserPassword", this.myPassword);
+      // this.$store.dispatch();
     },
   },
 };
