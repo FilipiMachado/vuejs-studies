@@ -1,7 +1,7 @@
 <template>
   <div>
     <label>Nome</label>
-    <p>{{ $store.state.user.first_name }}</p>
+    <p>{{ data.name }}</p>
     <input v-model="myName" type="text" />
     <label>Sobrenome</label>
     <p>{{ $store.state.user.last_name }}</p>
@@ -26,6 +26,12 @@ export default {
       myLastName: undefined,
       myPassword: undefined,
       myEmail: undefined,
+      data: {
+        name: "",
+        lastName: "",
+        password: "",
+        email: "",
+      },
     };
   },
   methods: {
@@ -36,6 +42,13 @@ export default {
       this.$store.commit("saveLastName", this.myLastName);
       this.$store.commit("savePassword", this.myPassword);
       this.$store.commit("saveEmail", this.myEmail);
+      this.data = {
+        name: this.myName,
+        lastName: this.myLastName,
+        password: this.myPassword,
+        email: this.myEmail,
+      };
+      console.log(this.data);
       // Action
       // this.$store.dispatch();
     },
