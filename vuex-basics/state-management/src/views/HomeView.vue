@@ -27,10 +27,10 @@ export default {
       newPassword: undefined,
       newEmail: undefined,
       data: {
-        firstName: "fil",
-        lastName: "machado",
-        password: "123123",
-        email: "machado@localhost.com",
+        firstName: "",
+        lastName: "",
+        password: "",
+        email: "",
       },
     };
   },
@@ -39,6 +39,15 @@ export default {
       // Mutation
       // this.$store.commit();
       this.$store.commit("saveFirstName", this.newFirstName);
+      this.$store.commit("saveLastName", this.newLastName);
+      this.$store.commit("savePassword", this.newPassword);
+      this.$store.commit("saveEmail", this.newEmail);
+      this.data = {
+        firstName: this.newFirstName,
+        lastName: this.newLastName,
+        password: this.newPassword,
+        email: this.newEmail,
+      };
       // Action
       // this.$store.dispatch();
     },
