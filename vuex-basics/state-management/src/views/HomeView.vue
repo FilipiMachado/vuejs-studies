@@ -1,18 +1,18 @@
 <template>
   <div>
     <label>Nome</label>
-    <p>jk</p>
-    <input type="text" />
+    <p>{{ data.firstName }}</p>
+    <input v-model="newFirstName" type="text" />
     <label>Sobrenome</label>
-    <p>klçklç</p>
-    <input type="text" />
+    <p>{{ data.lastName }}</p>
+    <input v-model="newLastName" type="text" />
     <label>Senha</label>
-    <p>asdasd</p>
-    <input type="password" />
+    <p>{{ data.password }}</p>
+    <input v-model="newPassword" type="password" />
     <label>Email</label>
-    <p>iuuiiuo</p>
-    <input type="email" />
-    <button>Salvar</button>
+    <p>{{ data.email }}</p>
+    <input v-model="newEmail" type="email" />
+    <button @click="saveUser">Salvar</button>
   </div>
 </template>
 
@@ -21,7 +21,18 @@ export default {
   name: "HomeView",
   components: {},
   data() {
-    return {};
+    return {
+      newFirstName: undefined,
+      newLastName: undefined,
+      newPassword: undefined,
+      newEmail: undefined,
+      data: {
+        firstName: "fil",
+        lastName: "machado",
+        password: "123123",
+        email: "machado@localhost.com",
+      },
+    };
   },
   methods: {
     saveUser() {
