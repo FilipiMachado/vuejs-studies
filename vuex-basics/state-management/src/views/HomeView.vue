@@ -38,6 +38,7 @@ export default {
     saveUser() {
       // Mutation
       // this.$store.commit();
+      this.$store.commit("saveFirstName", this.newFirstName);
       // Action
       // this.$store.dispatch();
     },

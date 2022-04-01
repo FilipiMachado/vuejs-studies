@@ -13,7 +13,20 @@ export default new Vuex.Store({
     },
   },
   getters: {},
-  mutations: {},
+  mutations: {
+    saveFirstName(state, payload) {
+      state.data.name = payload;
+    },
+    saveLastName(state, payload) {
+      state.data.lastName = payload;
+    },
+    savePassword(state, payload) {
+      state.data.password = payload;
+    },
+    saveEmail(state, payload) {
+      state.data.email = payload;
+    },
+  },
   actions: {},
   modules: {},
 });
