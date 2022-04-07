@@ -17,6 +17,11 @@ const store = createStore({
       state.counter = state.counter + payload.value;
     },
   },
+  getters: {
+    finalCounter(state) {
+      return state.counter * 3;
+    },
+  },
 })
 
 const app = createApp(App);

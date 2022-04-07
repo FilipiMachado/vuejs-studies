@@ -4,6 +4,7 @@
     <button @click="addTwo">Add 2</button>
     <br/><br/>
     <ChangeCounter />
+    <FavoriteValue />
   </base-container>
 </template>
 
@@ -11,6 +12,7 @@
 import BaseContainer from './components/BaseContainer.vue';
 import ChangeCounter from './components/ChangeCounter.vue';
 import TheCounter from './components/TheCounter.vue';
+import FavoriteValue from './components/FavoriteValue.vue';
 
 export default {
   data() {
@@ -20,10 +22,12 @@ export default {
     BaseContainer,
     ChangeCounter,
     TheCounter,
+    FavoriteValue,
   },
   methods: {
     addTwo() {
-      this.$store.commit('increaseTwo', {
+      this.$store.commit({
+        type: 'increaseTwo',
         value: 2,
       })
     },
