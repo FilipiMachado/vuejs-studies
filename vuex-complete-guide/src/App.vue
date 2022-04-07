@@ -1,5 +1,6 @@
 <template>
   <base-container title="Vuex">
+    <TheCounter />
     <button>Add 2</button>
     <br/><br/>
     <ChangeCounter />
@@ -9,6 +10,7 @@
 <script>
 import BaseContainer from './components/BaseContainer.vue';
 import ChangeCounter from './components/ChangeCounter.vue';
+import TheCounter from './components/TheCounter.vue';
 
 export default {
   data() {
@@ -17,6 +19,7 @@ export default {
   components: {
     BaseContainer,
     ChangeCounter,
+    TheCounter,
   },
 };
 </script>
