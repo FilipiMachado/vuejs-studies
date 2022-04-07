@@ -1,7 +1,7 @@
 <template>
   <base-container title="Vuex">
     <TheCounter />
-    <button>Add 11</button>
+    <button @click="addEleven">Add 11</button>
     <br/><br/>
     <ChangeCounter />
   </base-container>
@@ -20,6 +20,11 @@ export default {
     BaseContainer,
     TheCounter,
     ChangeCounter,
+  },
+  methods: {
+    addEleven() {
+      this.$store.state.counter += 11;
+    },
   },
 };
 </script>

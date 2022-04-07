@@ -9,7 +9,11 @@ const store = createStore({
       counter: 0,
     };
   },
-
+  mutations: {
+    increment(state) {
+      state.counter++;
+    },
+  },
 })
 
 const app = createApp(App);
