@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     addTwo() {
-      this.$store.commit({
+      this.$store.dispatch({
         type: 'increaseTwo',
         value: 2,
       })
