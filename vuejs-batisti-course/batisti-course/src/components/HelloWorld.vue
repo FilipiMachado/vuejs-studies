@@ -1,6 +1,10 @@
 <template>
   <div class="hello">
-    
+    <form>
+      <input v-model="input_name" placeholder="Digite o seu nome" type="text">
+      <input type="submit" value="Enviar" @click.prevent="submitForm">
+    </form>
+    <p>Meu nome é {{ name }} e tenho {{ age }} anos</p>
   </div>
 </template>
 
@@ -8,10 +12,25 @@
 export default {
   name: 'HelloWorld',
   props: {},
+  data() {
+    return {
+      name: 'Fil',
+      age: 35,
+      input_name: "",
+    }
+  },
+  methods: {
+    submitForm() {
+      if (this.input_name === '') {
+        alert('Você não digitou nada jovem!')
+      } else {
+        console.log(this.input_name)
+      }
+    },
+  },
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
   margin: 40px 0 0;
