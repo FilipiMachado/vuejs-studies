@@ -4,7 +4,7 @@
       <input v-model="input_name" placeholder="Digite o seu nome" type="text">
       <input type="submit" value="Enviar" @click.prevent="submitForm">
     </form>
-    <p>Meu nome é {{ name }} e tenho {{ age }} anos</p>
+    <p>Meu nome é {{ myName }} e tenho {{ age }} anos</p>
   </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
   props: {},
   data() {
     return {
-      name: 'Fil',
+      myName: 'Fil',
       age: 35,
       input_name: "",
     }
@@ -24,7 +24,7 @@ export default {
       if (this.input_name === '') {
         alert('Você não digitou nada jovem!')
       } else {
-        console.log(this.input_name)
+        this.myName = this.input_name
       }
     },
   },
