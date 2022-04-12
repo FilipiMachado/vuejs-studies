@@ -1,6 +1,9 @@
 <template>
   <div>
-    <h1 v-for="(item, idx) in posts" :key="idx">{{ item.title }}</h1>
+    <div v-for="(item, idx) in posts" :key="idx">
+      <h1 >{{ item.title }}</h1>
+      <p>{{ item.body }}</p>
+    </div>
   </div>
 </template>
 
