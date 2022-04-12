@@ -1,20 +1,22 @@
 <template>
   <div>
-    <h1>
-      {{ msg }}
-    </h1>
-    <p>{{ this.$store.state.test }}</p>
+    <p>test</p>
   </div>
 </template>
 
 <script>
 export default {
   name: 'app',
+  mounted() {
+    setTimeout(() => {
+      this.$store.dispatch('loadPosts').then((response) => {
+        console.log(response)
+      })
+    }, 1000)
+  },
   data () {
-    return {
-      msg: 'Hello World!',
-    }
-  }
+    return {}
+  },
 }
 </script>
 
