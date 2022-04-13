@@ -1,16 +1,14 @@
 <template>
-  <div>Footer</div>
+  <div>
+    <h1>Orders Page</h1>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'FooTer',
+  name: 'OrdersView',
   data() {
     return {}
   },
-};
+}
 </script>
-
-<style scoped>
-
-</style>
