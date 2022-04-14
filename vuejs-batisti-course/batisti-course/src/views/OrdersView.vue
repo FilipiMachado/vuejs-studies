@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>Orders Page</h1>
+  <div class="main-container">
+    <h1>Orders View</h1>
   </div>
 </template>
 
