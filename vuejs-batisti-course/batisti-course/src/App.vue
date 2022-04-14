@@ -22,4 +22,11 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+* {
+  font-family: "Helvetica", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+</style>
