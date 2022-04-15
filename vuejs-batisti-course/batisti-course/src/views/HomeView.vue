@@ -1,6 +1,8 @@
 <template>
+  <p>banner</p>
   <div class="main-container">
-    <h1>Home View</h1>
+    <h1>Mount your Lunch</h1>
+    <p>Form</p>
   </div>
 </template>
 
