@@ -1,80 +1,80 @@
 {
-  "ingredientes": {
-    "paes": [
+  "ingredients": {
+    "breads": [
       {
         "id": 1,
-        "tipo": "Italiano Branco"
+        "type": "Italiano Branco"
       },
       {
         "id": 2,
-        "tipo": "3 Queijos"
+        "type": "3 Queijos"
       },
       {
         "id": 3,
-        "tipo": "Parmesão e Orégano"
+        "type": "Parmesão e Orégano"
       },
       {
         "id": 4,
-        "tipo": "Integral"
+        "type": "Integral"
       }
     ],
-    "carnes": [
+    "meats": [
       {
         "id": 1,
-        "tipo": "Maminha"
+        "type": "Maminha"
       },
       {
         "id": 2,
-        "tipo": "Alcatra"
+        "type": "Alcatra"
       },
       {
         "id": 3,
-        "tipo": "Picanha"
+        "type": "Picanha"
       },
       {
         "id": 4,
-        "tipo": "Veggie burger"
+        "type": "Veggie burger"
       }
     ],
-    "opcionais": [
+    "optionals": [
       {
         "id": 1,
-        "tipo": "Bacon"
+        "type": "Bacon"
       },
       {
         "id": 2,
-        "tipo": "Cheddar"
+        "type": "Cheddar"
       },
       {
         "id": 3,
-        "tipo": "Salame"
+        "type": "Salame"
       },
       {
         "id": 4,
-        "tipo": "Tomate"
+        "type": "Tomate"
       },
       {
         "id": 4,
-        "tipo": "Cebola roxa"
+        "type": "Cebola roxa"
       },
       {
         "id": 4,
-        "tipo": "Pepino"
+        "type": "Pepino"
       }
     ]
   },
   "status": [
     {
       "id": 1,
-      "tipo": "Solicitado"
+      "type": "Requested"
     },
     {
       "id": 2,
-      "tipo": "Em produção"
+      "type": "In Production"
     },
     {
       "id": 3,
-      "tipo": "Finalizado"
+      "type": "Finished"
     }
   ],
   "burgers": []

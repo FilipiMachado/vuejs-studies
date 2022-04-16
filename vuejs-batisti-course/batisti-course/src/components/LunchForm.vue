@@ -49,8 +49,21 @@ export default {
   data() {
     return {
       name: undefined,
+      bread: undefined,
+      breadData: undefined,
       meat: undefined,
+      meatData: undefined,
+      optionals: [],
+      optionalsData: undefined,
+      status: "Requested",
+      msg: undefined,
     }
+  },
+  methods: {
+    async getIngredients() {
+      const req = await fetch('http://localhost:3000/ingredients')
+      const data = await req.json()
+    },
   },
 }
 </script>
