@@ -59,10 +59,14 @@ export default {
       msg: undefined,
     }
   },
+  mounted() {
+    this.getIngredients()
+  },
   methods: {
     async getIngredients() {
       const req = await fetch('http://localhost:3000/ingredients')
       const data = await req.json()
+      console.log(data)
     },
   },
 }
