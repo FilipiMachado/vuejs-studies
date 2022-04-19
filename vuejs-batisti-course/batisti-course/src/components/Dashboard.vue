@@ -25,11 +25,11 @@
           </ul>
         </div>
         <div>
-          <select name="status" class="status" @click="updateBurger">
+          <select name="status" class="status" @change="updateBurger($event, data.id)">
             <option value="">Select</option>
             <option v-for="s in status" 
                     :key="s.id" 
-                    value="s.type" 
+                    :value="s.type" 
                     :selected="data.status == s.type">
               {{ s.type }}
             </option>
