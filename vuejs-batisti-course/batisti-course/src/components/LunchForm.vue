@@ -109,6 +109,11 @@ export default {
       this.msgIsActive = !this.msgIsActive
       this.msg = `Order ${res.id} successfully requested!`
 
+      setTimeout(() => {
+        this.msg = ''
+        this.msgIsActive = !this.msgIsActive
+      }, 5000);
+
       this.name = ''
       this.meat = ''
       this.bread = ''
