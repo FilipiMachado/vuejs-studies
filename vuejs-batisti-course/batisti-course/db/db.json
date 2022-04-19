@@ -77,5 +77,16 @@
       "type": "Finished"
     }
   ],
-  "burgers": []
+  "burgers": [
+    {
+      "name": "Filipi",
+      "meat": "Alcatra",
+      "bread": "Italiano Branco",
+      "optionals": [
+        "Bacon"
+      ],
+      "status": "Requested",
+      "id": 1
+    }
+  ]
 }

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <form class="lunch-form">
+      <form @submit.prevent="createLunch" method="POST" class="lunch-form">
         <div class="input-container">
           <label for="name">Your Name:</label>
           <input type="text" 
@@ -38,13 +38,12 @@
             <input type="checkbox" 
                    name="optionals" 
                    v-model="optionals" 
-                   :value="optionals.type">
+                   :value="optional.type">
             <span>{{ optional.type }}</span>
           </div>
         </div>
         <div class="input-container">
-          <input @click.prevent="showSelectedIngredients" 
-                 type="submit" 
+          <input type="submit" 
                  class="submit-btn" 
                  value="Create my lunch">
         </div>
@@ -80,6 +79,29 @@ export default {
       this.breadData = data.breads
       this.meatData = data.meats
       this.optionalsData = data.optionals
+    },
+    async createLunch() {
+      const data = {
+        name: this.name,
+        meat: this.meat,
+        bread: this.bread,
+        optionals: Array.from(this.optionals),
+        status: "Requested",
+      }
+      
+      const dataJson = JSON.stringify(data)
+
+      const req = await fetch("http://localhost:3000/burgers", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: dataJson,
+      })
+
+      console.log(req)
+
+      const res = await req.json(req)
+
+      console.log(res)
     },
     showSelectedIngredients() {
       console.log(this.name, this.bread, this.meat)
