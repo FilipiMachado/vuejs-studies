@@ -12,7 +12,9 @@
       </div>
     </div>
     <div class="lunch-table-rows">
-      <div v-for="data in ordersData" :key="data.id" class="lunch-table-row">
+      <div v-for="data in ordersData" 
+           :key="data.id" 
+           class="lunch-table-row">
         <div class="order-number">{{ data.id }}</div>
         <div>{{ data.name }}</div>
         <div>{{ data.bread }}</div>
@@ -23,13 +25,19 @@
           </ul>
         </div>
         <div>
-          <select name="status" class="status">
+          <select name="status" class="status" @click="updateBurger">
             <option value="">Select</option>
-            <option v-for="s in status" :key="s.id" value="s.type" :selected="data.status == s.type">
+            <option v-for="s in status" 
+                    :key="s.id" 
+                    value="s.type" 
+                    :selected="data.status == s.type">
               {{ s.type }}
             </option>
           </select>
-          <button @click="deleteBurger(data.id)" class="delete-btn">Cancel</button>
+          <button @click="deleteBurger(data.id)" 
+                  class="delete-btn">
+            Cancel
+          </button>
         </div>
       </div>
     </div>
@@ -85,6 +93,23 @@ export default {
       this.msg = `Order ${id} successfully deleted!`
 
       this.getOrders()
+    },
+    async updateBurger(e, id) {
+      console.log(e, id)
+
+      const option = e.target.value
+
+      const dataJson = JSON.stringify({ status: option })
+
+      const req = await fetch(`http://localhost:3000/burgers/${id}`, {
+        method: 'PATCH',
+        headers: { "Content-Type": "application/json" },
+        body: dataJson,
+      })
+
+      const res = await req.json()
+
+      console.log(res)
     },
   },
 };
