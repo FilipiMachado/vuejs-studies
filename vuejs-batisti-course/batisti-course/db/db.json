@@ -86,70 +86,41 @@
         "Bacon"
       ],
       "status": "Requested",
-      "id": 1
+      "id": 6
     },
     {
-      "name": "Filipi",
+      "name": "Filipi Rodrigues Machado",
       "meat": "Veggie burger",
       "bread": "Parmesão e Orégano",
       "optionals": [
-        "Salami",
-        "Purple onion"
+        "Tomato",
+        "Cucumber"
       ],
       "status": "Requested",
-      "id": 2
+      "id": 9
     },
     {
-      "name": "Filipi",
-      "meat": "Picanha",
-      "bread": "3 Queijos",
+      "name": "Filipi Rodrigues Machado",
+      "meat": "Alcatra",
+      "bread": "Integral",
       "optionals": [
         "Bacon",
         "Tomato"
       ],
       "status": "Requested",
-      "id": 3
-    },
-    {
-      "name": "vick",
-      "meat": "Veggie burger",
-      "bread": "3 Queijos",
-      "optionals": [
-        "Cheddar"
-      ],
-      "status": "Requested",
-      "id": 4
-    },
-    {
-      "name": "vi",
-      "meat": "Alcatra",
-      "bread": "Italiano Branco",
-      "optionals": [
-        "Salami"
-      ],
-      "status": "Requested",
-      "id": 5
+      "id": 10
     },
     {
       "name": "Filipi",
       "meat": "Alcatra",
-      "bread": "Italiano Branco",
-      "optionals": [
-        "Bacon"
-      ],
-      "status": "Requested",
-      "id": 6
-    },
-    {
-      "name": "Filipi",
-      "meat": "Picanha",
-      "bread": "3 Queijos",
+      "bread": "Parmesão e Orégano",
       "optionals": [
         "Bacon",
+        "Purple onion",
         "Salami"
       ],
       "status": "Requested",
-      "id": 7
+      "id": 11
     }
   ]
 }

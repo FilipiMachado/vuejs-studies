@@ -1,6 +1,7 @@
 <template>
   <div class="lunch-table">
     <div>
+      <Message v-if="msgIsActive" :msg="msg"/>
       <div class="lunch-table-heading">
         <div class="order-id">#:</div>
         <div>Client:</div>
@@ -28,7 +29,7 @@
               {{ s.type }}
             </option>
           </select>
-          <button class="delete-btn">Cancel</button>
+          <button @click="deleteBurger(data.id)" class="delete-btn">Cancel</button>
         </div>
       </div>
     </div>
@@ -36,14 +37,21 @@
 </template>
 
 <script>
+import Message from '../components/Message.vue'
+
 export default {
   name: 'DashBoard',
+  components: {
+    Message,
+  },
   data() {
     return {
       burgers: undefined,
       burgers_id: undefined,
       status: [],
       ordersData: undefined,
+      msg: undefined,
+      msgIsActive: false,
     }
   },
   mounted() {
@@ -63,7 +71,21 @@ export default {
       const data = await req.json()
 
       this.status = data
-    }
+    },
+    async deleteBurger(id) {
+      const req = await fetch(`http://localhost:3000/burgers/${id}`, {
+        method: 'DELETE',
+      })
+
+      const res = await req.json()
+
+      console.log(res)
+
+      this.msgIsActive = !this.msgIsActive
+      this.msg = `Order ${id} successfully deleted!`
+
+      this.getOrders()
+    },
   },
 };
 </script>
