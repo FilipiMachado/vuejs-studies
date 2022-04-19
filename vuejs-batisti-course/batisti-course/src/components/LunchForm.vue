@@ -16,7 +16,7 @@
             <option value="">Select your bread</option>
             <option v-for="bread in breadData" 
                     :key="bread.id"
-                    value="bread-type">
+                    :value="bread.type">
               {{ bread.type }}
             </option>
           </select>
@@ -27,19 +27,19 @@
             <option value="">Select your meat</option>
             <option v-for="meat in meatData" 
                     :key="meat.id"
-                    value="meat-type">
+                    :value="meat.type">
               {{ meat.type }}
             </option>
           </select>
         </div>
         <div id="optionals-container" class="input-container">
-          <label class="optionals-title" for="meat">Choose the optionals:</label>
-          <div class="checkbox-container">
+          <label class="optionals-title" for="optionals">Choose the optionals:</label>
+          <div class="checkbox-container" v-for="optional in optionalsData" :key="optional.id">
             <input type="checkbox" 
                    name="optionals" 
                    v-model="optionals" 
-                   value="salami">
-            <span>Salami</span>
+                   :value="optionals.type">
+            <span>{{ optional.type }}</span>
           </div>
         </div>
         <div class="input-container">
