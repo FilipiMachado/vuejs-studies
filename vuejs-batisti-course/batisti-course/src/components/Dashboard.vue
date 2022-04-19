@@ -92,11 +92,14 @@ export default {
       this.msgIsActive = !this.msgIsActive
       this.msg = `Order ${id} successfully deleted!`
 
+      setTimeout(() => {
+        this.msg = ''
+        this.msgIsActive = !this.msgIsActive
+      }, 5000);
+
       this.getOrders()
     },
     async updateBurger(e, id) {
-      console.log(e, id)
-
       const option = e.target.value
 
       const dataJson = JSON.stringify({ status: option })
@@ -108,6 +111,18 @@ export default {
       })
 
       const res = await req.json()
+
+      if (res.status == '') {
+        return
+      }
+
+      this.msgIsActive = !this.msgIsActive
+      this.msg = `Order ${id} changed to ${res.status}!`
+
+      setTimeout(() => {
+        this.msg = ''
+        this.msgIsActive = !this.msgIsActive
+      }, 5000);
 
       console.log(res)
     },
