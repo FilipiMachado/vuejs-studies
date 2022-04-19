@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Message v-if="msgIsActive" :msg="msg"/>
     <div>
       <form @submit.prevent="createLunch" method="POST" class="lunch-form">
         <div class="input-container">
@@ -53,8 +54,13 @@
 </template>
 
 <script>
+import Message from '../components/Message.vue'
+
 export default {
   name: 'LunchForm',
+  components: {
+    Message,
+  },
   data() {
     return {
       name: undefined,
@@ -66,6 +72,7 @@ export default {
       optionalsData: undefined,
       status: "Requested",
       msg: undefined,
+      msgIsActive: false,
     }
   },
   mounted() {
@@ -97,11 +104,15 @@ export default {
         body: dataJson,
       })
 
-      console.log(req)
+      const res = await req.json()
 
-      const res = await req.json(req)
+      this.msgIsActive = !this.msgIsActive
+      this.msg = `Order ${res.id} successfully requested!`
 
-      console.log(res)
+      this.name = ''
+      this.meat = ''
+      this.bread = ''
+      this.optionals = []
     },
     showSelectedIngredients() {
       console.log(this.name, this.bread, this.meat)
