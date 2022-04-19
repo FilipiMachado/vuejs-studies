@@ -11,38 +11,19 @@
       </div>
     </div>
     <div class="lunch-table-rows">
-      <div class="lunch-table-row">
-        <div class="order-number">1</div>
-        <div>Fil</div>
-        <div>Pão de Trigo</div>
-        <div>Maminha</div>
+      <div v-for="data in ordersData" :key="data.id" class="lunch-table-row">
+        <div class="order-number">{{ data.id }}</div>
+        <div>{{ data.name }}</div>
+        <div>{{ data.bread }}</div>
+        <div>{{ data.meat }}</div>
         <div>
           <ul>
-            <li>Salami</li>
-            <li>Tomato</li>
+            <li v-for="(optional, idx) in data.optionals" :key="idx">{{ optional }}</li>
           </ul>
         </div>
         <div>
           <select name="status" class="status">
-            <option value="">Select the lunch status</option>
-          </select>
-          <button class="delete-btn">Cancel</button>
-        </div>
-      </div>
-      <div class="lunch-table-row">
-        <div class="order-number">1</div>
-        <div>Fil</div>
-        <div>Pão de Trigo</div>
-        <div>Maminha</div>
-        <div>
-          <ul>
-            <li>Salami</li>
-            <li>Tomato</li>
-          </ul>
-        </div>
-        <div>
-          <select name="status" class="status">
-            <option value="">Select the lunch status</option>
+            <option value="">Select</option>
           </select>
           <button class="delete-btn">Cancel</button>
         </div>
@@ -55,7 +36,24 @@
 export default {
   name: 'DashBoard',
   data() {
-    return {}
+    return {
+      burgers: undefined,
+      burgers_id: undefined,
+      status: [],
+      ordersData: undefined,
+    }
+  },
+  mounted() {
+    this.getLunchs()
+  },
+  methods: {
+    async getLunchs() {
+      const req = await fetch('http://localhost:3000/burgers')
+      const data = await req.json()
+      
+      this.ordersData = data
+      console.log(this.ordersData)
+    },
   },
 };
 </script>
