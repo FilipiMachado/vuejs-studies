@@ -1,14 +1,14 @@
 <template>
   <div>
-    eu sou a página aula Filipi 
+    Home View
   </div>
 </template>
 
 <script>
 export default {
+  name: 'HomeView',
+  components: {
+
+  }
 }
 </script>
-
-<style scoped>
-
-</style>

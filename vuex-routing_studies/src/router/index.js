@@ -4,6 +4,7 @@ import AulaFilipi from '../views/AulaFilipi.vue'
 import AulaAna from '../views/AulaAna.vue'
 import PaginaInicial from'../paginas/PaginaInicial.vue'
 import PaginaErro404 from '../paginas/PaginaErro404.vue'
+import DetalheProduto from '@/views/ProductDetail.vue'
 
 Vue.use(VueRouter)
 
@@ -29,11 +30,15 @@ const routes = [
     component: PaginaInicial
   },
   {
+    path: '/detalheproduto/:nomedoproduto/:precodoproduto',
+    name: 'DetalheProduto',
+    component: DetalheProduto
+  },
+  {
     path: '*',
     name: 'PaginaErro404',
     component: PaginaErro404
-  }
-
+  },
 ]
 
 const router = new VueRouter({
