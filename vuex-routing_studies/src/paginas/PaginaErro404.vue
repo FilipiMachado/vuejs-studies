@@ -1,5 +1,5 @@
 <template>
-  <div>Erro! Página não encontrada!</div>
+  <div>{{ $store.state.errorMessage404 }}</div>
 </template>
 
 <script>

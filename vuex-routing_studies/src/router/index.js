@@ -30,7 +30,7 @@ const routes = [
     component: PaginaInicial
   },
   {
-    path: '/detalheproduto/:nomedoproduto/:precodoproduto',
+    path: '/detalheproduto/:idproduto',
     name: 'DetalheProduto',
     component: DetalheProduto
   },

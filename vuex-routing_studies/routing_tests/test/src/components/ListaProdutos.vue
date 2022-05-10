@@ -17,7 +17,7 @@ export default {
   },
   mounted() {
     this.getProducts()
-    console.log(this.productList)
+    //console.log(this.productList)
   },
   methods: {
     getProducts() {

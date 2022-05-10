@@ -1,26 +1,37 @@
 <template>
   <div>
     <div class="title">Eu sou a página Inicial</div>
-    <div>Para qual page você quer ir?</div>
-    <a href="http://localhost:8080/#/aulafilipi">Aula Filipi</a>
-    <a href="http://localhost:8080/#/aulaana">Aula Ana</a>
-    <router-link to="aulafilipi">Aula Filipi (certo)</router-link>
-    <router-link to="aulaana">Aula Ana (certo)</router-link>,
-    <div class="product-list">
-      <router-link to="/detalheproduto/lapis/50">Lápis</router-link>
-      <router-link to="/detalheproduto/caderno/22">caderno</router-link>
-      <router-link to="/detalheproduto/borracha/5">borracha</router-link>
-      <router-link to="/detalheproduto/cadeira/13">cadeira</router-link>
+    <div v-for="product in products" :key="product.id">
+      <router-link :to="'/detalheproduto/' + product.id">{{ product.title }}</router-link>
     </div>
+    <div>Vezes Acessada: {{ $store.state.accessNumber }}</div>
+    <div>{{ $store.state.productName }}</div>
   </div>
-  
-  
 </template>
 
 <script>
 export default {
   data() {
-    return {}
+    return {
+      products: [],
+    }
+  },
+  mounted() {
+    console.log(this.$store.state.test)
+    console.log(this.$store.state.productName)
+    this.getProducts()
+    //this.$store.state.accessNumber += 1
+    this.$store.commit('incrementAccessNumber', 2)
+  },
+  methods: {
+    getProducts() {
+      fetch(`${this.$store.state.fakeStoreAPI}/products`)
+            .then(res=>res.json())
+            .then((json)=> {
+              //console.log(json)
+              this.products = json
+              })
+    }
   }
 }
 </script>
